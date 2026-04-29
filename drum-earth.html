@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drum Earth Trilogy — Social Media Marketing Calendar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:   #0A0E1A;
+  --deep:   #060B16;
+  --blue:   #1A3A6B;
+  --glow:   #4A9EFF;
+  --cyan:   #00C8FF;
+  --gold:   #C8A84B;
+  --cream:  #F5F0E8;
+  --muted:  #8899BB;
+  --white:  #ffffff;
+  --announce-bg:#FFF3E0; --announce-fg:#BF5A00;
+  --story-bg:#E8F0FE;    --story-fg:#1A3A6B;
+  --hook-bg:#EDE7F6;     --hook-fg:#5B1FA8;
+  --quote-bg:#E0F7FA;    --quote-fg:#006064;
+  --bts-bg:#E8F5E9;      --bts-fg:#1B5E20;
+  --engage-bg:#FCE4EC;   --engage-fg:#880E4F;
+  --review-bg:#FFF8E1;   --review-fg:#E65100;
+  --buy-bg:#E3F2FD;      --buy-fg:#0D47A1;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--deep);color:var(--cream);overflow-x:hidden;}
+
+/* ── STARS ─────────────────────────────────────── */
+.stars{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.star{position:absolute;border-radius:50%;background:#fff;animation:twinkle var(--d,3s) ease-in-out infinite var(--delay,0s);}
+@keyframes twinkle{0%,100%{opacity:var(--min,0.1)}50%{opacity:var(--max,0.8)}}
+
+/* ── PROGRESS ───────────────────────────────────── */
+.progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--glow),var(--cyan));z-index:200;transition:width 0.1s;}
+
+/* ── NAV ────────────────────────────────────────── */
+.nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:99;
+  background:rgba(6,11,22,0.85);backdrop-filter:blur(20px);
+  border:1px solid rgba(74,158,255,0.2);border-radius:100px;
+  padding:10px 24px;display:flex;align-items:center;gap:1.5rem;}
+.nav-brand{font-family:'Cinzel',serif;font-size:0.85rem;font-weight:700;
+  color:var(--cyan);white-space:nowrap;letter-spacing:0.08em;}
+.nav-links{display:flex;gap:1rem;}
+.nav-link{font-size:0.75rem;color:rgba(255,255,255,0.5);text-decoration:none;
+  font-weight:500;transition:color 0.2s;white-space:nowrap;}
+.nav-link:hover{color:var(--cyan);}
+@media(max-width:600px){.nav-links{display:none;}.nav{padding:8px 16px;}}
+
+/* ── HERO ───────────────────────────────────────── */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+  padding:7rem 2rem 5rem;overflow:hidden;}
+
+.hero-bg{position:absolute;inset:0;z-index:0;
+  background:radial-gradient(ellipse 70% 60% at 50% 30%,#0D2B5E 0%,#060B16 70%);}
+
+.nebula{position:absolute;border-radius:50%;filter:blur(100px);opacity:0.2;pointer-events:none;}
+.nebula-1{width:600px;height:400px;background:#1A6BFF;top:-100px;left:-150px;animation:nebula 18s ease-in-out infinite alternate;}
+.nebula-2{width:400px;height:400px;background:#7B2FFF;bottom:-50px;right:-100px;animation:nebula 14s ease-in-out infinite alternate-reverse;}
+.nebula-3{width:300px;height:300px;background:#00C8FF;top:40%;right:10%;animation:nebula 22s ease-in-out infinite alternate;}
+@keyframes nebula{from{transform:translate(0,0) scale(1);}to{transform:translate(40px,30px) scale(1.15);}}
+
+.hero-content{position:relative;z-index:1;max-width:800px;}
+
+.hero-eyebrow{display:inline-block;font-family:'DM Sans',sans-serif;font-size:0.7rem;
+  font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--cyan);
+  border:1px solid rgba(0,200,255,0.3);padding:6px 20px;border-radius:100px;
+  margin-bottom:2rem;animation:fadeUp 0.8s ease both;}
+
+.live-badge{display:inline-flex;align-items:center;gap:8px;
+  background:rgba(0,200,80,0.15);border:1px solid rgba(0,200,80,0.4);
+  border-radius:100px;padding:6px 16px;margin-left:12px;
+  font-size:0.7rem;font-weight:600;color:#00C850;letter-spacing:0.1em;}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#00C850;
+  animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.3);}}
+
+.hero-title{font-family:'Cinzel',serif;font-size:clamp(3rem,10vw,7.5rem);
+  font-weight:900;color:#fff;line-height:0.9;letter-spacing:0.04em;
+  animation:fadeUp 0.8s 0.1s ease both;}
+.hero-title span{display:block;font-size:0.35em;font-weight:400;
+  letter-spacing:0.3em;color:var(--gold);margin-bottom:0.5rem;}
+
+.hero-subtitle{margin-top:1.8rem;font-family:'Crimson Pro',serif;font-size:1.2rem;
+  color:rgba(255,255,255,0.6);line-height:1.75;max-width:560px;margin-inline:auto;
+  font-style:italic;animation:fadeUp 0.8s 0.2s ease both;}
+
+.hero-meta{margin-top:2.5rem;display:flex;gap:1rem;justify-content:center;
+  flex-wrap:wrap;animation:fadeUp 0.8s 0.3s ease both;}
+
+.meta-chip{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.7);font-size:0.8rem;font-weight:500;
+  padding:8px 18px;border-radius:100px;backdrop-filter:blur(10px);}
+
+.hero-cta{margin-top:2.5rem;animation:fadeUp 0.8s 0.4s ease both;}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,var(--blue),var(--glow));
+  color:#fff;font-weight:600;font-size:0.9rem;padding:14px 32px;
+  border-radius:100px;text-decoration:none;border:none;cursor:pointer;
+  transition:transform 0.2s,box-shadow 0.2s;letter-spacing:0.03em;
+  box-shadow:0 8px 32px rgba(74,158,255,0.3);}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 16px 48px rgba(74,158,255,0.4);}
+
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  z-index:1;display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:rgba(255,255,255,0.3);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;
+  animation:fadeUp 1s 0.7s ease both;}
+.scroll-line{width:1px;height:50px;background:linear-gradient(to bottom,rgba(0,200,255,0.5),transparent);
+  animation:scrollPulse 2s ease-in-out infinite;}
+@keyframes scrollPulse{0%,100%{opacity:0.4}50%{opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── STATS BAR ───────────────────────────────────── */
+.stats-bar{background:linear-gradient(135deg,var(--blue),#0D2040);
+  padding:1.4rem 2rem;display:flex;justify-content:center;
+  gap:clamp(2rem,6vw,5rem);flex-wrap:wrap;
+  border-top:1px solid rgba(74,158,255,0.2);
+  border-bottom:1px solid rgba(74,158,255,0.2);}
+.stat{text-align:center;}
+.stat-num{font-family:'Cinzel',serif;font-size:2.2rem;font-weight:700;
+  color:var(--cyan);line-height:1;}
+.stat-label{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;
+  color:rgba(255,255,255,0.5);margin-top:4px;}
+
+/* ── SECTION WRAPPER ─────────────────────────────── */
+.section-wrap{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:0 2rem;}
+
+/* ── ABOUT BOOK ──────────────────────────────────── */
+.about{padding:5rem 0 3rem;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem;}
+@media(max-width:640px){.about-grid{grid-template-columns:1fr;}}
+.about-card{background:rgba(255,255,255,0.04);border:1px solid rgba(74,158,255,0.15);
+  border-radius:16px;padding:1.5rem;}
+.about-card-icon{font-size:1.5rem;margin-bottom:0.75rem;}
+.about-card-title{font-family:'Cinzel',serif;font-size:0.95rem;color:var(--gold);
+  margin-bottom:0.5rem;letter-spacing:0.05em;}
+.about-card-text{font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;}
+
+/* ── SECTION LABELS ───────────────────────────────── */
+.section-label{font-size:0.7rem;font-weight:600;letter-spacing:0.22em;
+  text-transform:uppercase;color:var(--cyan);margin-bottom:1rem;}
+.section-title{font-family:'Cinzel',serif;font-size:clamp(1.8rem,4vw,2.8rem);
+  font-weight:700;color:#fff;line-height:1.2;margin-bottom:1rem;}
+.section-body{font-family:'Crimson Pro',serif;font-size:1.05rem;
+  color:rgba(255,255,255,0.6);line-height:1.8;max-width:620px;}
+
+/* ── STRATEGY ────────────────────────────────────── */
+.strategy{padding:4rem 0;}
+.strategy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:1rem;margin-top:2rem;}
+.strategy-card{background:rgba(255,255,255,0.03);border:1px solid rgba(74,158,255,0.12);
+  border-radius:16px;padding:1.5rem;position:relative;overflow:hidden;
+  transition:transform 0.2s,border-color 0.2s;}
+.strategy-card:hover{transform:translateY(-3px);border-color:rgba(74,158,255,0.35);}
+.strategy-card::before{content:attr(data-week);position:absolute;top:-14px;right:10px;
+  font-family:'Cinzel',serif;font-size:5rem;font-weight:900;
+  color:rgba(74,158,255,0.06);line-height:1;pointer-events:none;}
+.strategy-card-label{font-size:0.65rem;font-weight:600;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--cyan);margin-bottom:0.5rem;}
+.strategy-card-title{font-family:'Cinzel',serif;font-size:1rem;color:#fff;
+  margin-bottom:0.5rem;letter-spacing:0.03em;}
+.strategy-card-desc{font-size:0.83rem;color:rgba(255,255,255,0.5);line-height:1.6;}
+
+/* ── LEGEND ──────────────────────────────────────── */
+.legend{padding:2rem 0;}
+.legend-title{font-size:0.7rem;font-weight:600;letter-spacing:0.2em;
+  text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1rem;}
+.legend-items{display:flex;gap:0.6rem;flex-wrap:wrap;}
+.legend-pill{font-size:0.73rem;font-weight:600;padding:5px 14px;border-radius:100px;}
+
+/* ── CALENDAR ────────────────────────────────────── */
+.calendar{padding:0 0 6rem;}
+.week-block{margin-bottom:4rem;}
+.week-header{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.5rem;
+  padding-bottom:1rem;border-bottom:1px solid rgba(74,158,255,0.2);}
+.week-number{font-family:'Cinzel',serif;font-size:3.5rem;font-weight:900;
+  color:var(--glow);line-height:1;min-width:3rem;opacity:0.7;}
+.week-title{font-family:'Cinzel',serif;font-size:1.5rem;font-weight:600;color:#fff;
+  line-height:1.2;letter-spacing:0.04em;}
+.week-dates{font-size:0.75rem;color:var(--muted);margin-top:3px;
+  font-weight:500;letter-spacing:0.05em;}
+.posts-grid{display:grid;gap:1rem;}
+
+/* ── POST CARD ───────────────────────────────────── */
+.post-card{background:rgba(255,255,255,0.03);border:1px solid rgba(74,158,255,0.12);
+  border-radius:18px;overflow:hidden;transition:box-shadow 0.25s,border-color 0.25s,transform 0.25s;
+  cursor:pointer;}
+.post-card:hover{border-color:rgba(74,158,255,0.3);transform:translateY(-2px);
+  box-shadow:0 12px 40px rgba(0,0,0,0.4);}
+.post-card.open{border-color:var(--glow);box-shadow:0 0 40px rgba(74,158,255,0.15);}
+
+.post-card-header{padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem;}
+.post-num{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-family:'Cinzel',serif;font-size:1.1rem;font-weight:700;
+  flex-shrink:0;}
+.post-meta{flex:1;min-width:0;}
+.post-day{font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:4px;}
+.post-title{font-family:'Cinzel',serif;font-size:1rem;font-weight:600;
+  color:#fff;line-height:1.3;letter-spacing:0.02em;}
+.post-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0;}
+.type-badge{font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+  padding:4px 10px;border-radius:100px;white-space:nowrap;}
+.chevron{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.06);
+  display:flex;align-items:center;justify-content:center;transition:transform 0.3s,background 0.2s;}
+.chevron svg{width:12px;height:12px;}
+.post-card.open .chevron{transform:rotate(180deg);background:var(--glow);}
+.post-card.open .chevron svg path{stroke:#fff;}
+.platform-row{display:flex;gap:6px;padding:0 1.5rem 1rem;flex-wrap:wrap;}
+.platform-pill{font-size:0.68rem;font-weight:600;padding:3px 10px;border-radius:100px;}
+.pill-fb{background:rgba(59,85,160,0.2);color:#8BA3E8;}
+.pill-ig{background:rgba(158,39,97,0.2);color:#E888B8;}
+.pill-tok{background:rgba(10,107,158,0.2);color:#72CFEE;}
+.pill-amz{background:rgba(255,153,0,0.2);color:#FFB347;}
+.pill-gr{background:rgba(93,139,83,0.2);color:#8EC97F;}
+
+/* ── DETAIL PANEL ────────────────────────────────── */
+.post-detail{max-height:0;overflow:hidden;transition:max-height 0.5s cubic-bezier(0.4,0,0.2,1);}
+.post-card.open .post-detail{max-height:1400px;}
+.detail-inner{border-top:1px solid rgba(74,158,255,0.1);padding:1.5rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+@media(max-width:640px){.detail-inner{grid-template-columns:1fr;}}
+.detail-label{font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--cyan);margin-bottom:0.75rem;display:flex;align-items:center;gap:8px;}
+.detail-label::after{content:'';flex:1;height:1px;background:rgba(74,158,255,0.2);}
+.caption-box{background:rgba(255,255,255,0.04);border-left:3px solid var(--glow);
+  border-radius:0 12px 12px 0;padding:1rem 1.25rem;font-size:0.87rem;line-height:1.8;
+  color:rgba(255,255,255,0.85);white-space:pre-line;font-family:'Crimson Pro',serif;}
+.designer-box{background:rgba(74,158,255,0.06);border-left:3px solid var(--cyan);
+  border-radius:0 12px 12px 0;padding:1rem 1.25rem;font-size:0.87rem;line-height:1.8;
+  color:rgba(100,180,255,0.9);font-style:italic;}
+
+/* ── COPY BTN ────────────────────────────────────── */
+.copy-btn{display:inline-flex;align-items:center;gap:6px;margin-top:0.75rem;
+  font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--glow);background:none;border:1px solid rgba(74,158,255,0.3);
+  border-radius:100px;padding:5px 12px;cursor:pointer;transition:background 0.2s,color 0.2s;}
+.copy-btn:hover{background:var(--glow);color:#fff;border-color:var(--glow);}
+.copy-btn.copied{background:#1B5E20;color:#fff;border-color:#1B5E20;}
+
+/* ── AMAZON SECTION ──────────────────────────────── */
+.amazon-section{padding:4rem 0;
+  background:linear-gradient(135deg,rgba(26,58,107,0.3),rgba(10,14,26,0));
+  border-top:1px solid rgba(74,158,255,0.12);
+  border-bottom:1px solid rgba(74,158,255,0.12);}
+.amazon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1rem;margin-top:2rem;}
+.amazon-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,153,0,0.2);
+  border-radius:16px;padding:1.5rem;text-align:center;transition:transform 0.2s,border-color 0.2s;}
+.amazon-card:hover{transform:translateY(-3px);border-color:rgba(255,153,0,0.5);}
+.amazon-card-icon{font-size:2rem;margin-bottom:0.75rem;}
+.amazon-card-title{font-family:'Cinzel',serif;font-size:0.9rem;color:var(--gold);
+  margin-bottom:0.5rem;}
+.amazon-card-text{font-size:0.83rem;color:rgba(255,255,255,0.55);line-height:1.6;}
+
+/* ── FOOTER ──────────────────────────────────────── */
+.footer{background:var(--navy);color:rgba(255,255,255,0.35);
+  text-align:center;padding:3rem 2rem;
+  border-top:1px solid rgba(74,158,255,0.1);}
+.footer-title{font-family:'Cinzel',serif;font-size:1.4rem;color:rgba(255,255,255,0.8);
+  margin-bottom:0.5rem;letter-spacing:0.08em;}
+.footer-divider{width:40px;height:2px;background:linear-gradient(90deg,var(--glow),var(--cyan));
+  margin:1.2rem auto;border-radius:2px;}
+.footer-sub{font-size:0.8rem;line-height:1.7;}
+
+/* ── REVEAL ──────────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.65s ease,transform 0.65s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ── BOOK BANNER ─────────────────────────────────── */
+.book-banner{background:linear-gradient(135deg,rgba(26,58,107,0.5),rgba(123,47,255,0.2));
+  border:1px solid rgba(74,158,255,0.2);border-radius:20px;
+  padding:2rem;display:flex;align-items:center;gap:2rem;margin-top:2.5rem;flex-wrap:wrap;}
+.book-cover-placeholder{width:90px;height:130px;border-radius:8px;flex-shrink:0;
+  background:linear-gradient(135deg,#0D2B5E,#1A6BFF);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cinzel',serif;font-size:0.6rem;color:#fff;text-align:center;padding:8px;
+  letter-spacing:0.05em;border:1px solid rgba(74,158,255,0.3);}
+.book-info{}
+.book-info-title{font-family:'Cinzel',serif;font-size:1.4rem;color:#fff;
+  font-weight:700;letter-spacing:0.06em;}
+.book-info-author{font-family:'Crimson Pro',serif;font-size:1rem;color:var(--gold);
+  font-style:italic;margin-top:4px;}
+.book-info-desc{font-size:0.85rem;color:rgba(255,255,255,0.55);margin-top:0.75rem;
+  line-height:1.6;max-width:480px;}
+.book-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:0.75rem;}
+.book-tag{font-size:0.7rem;font-weight:600;padding:3px 10px;border-radius:100px;
+  background:rgba(74,158,255,0.15);color:var(--cyan);}
+
+/* ── KEY DIFF ────────────────────────────────────── */
+.diff-note{background:rgba(200,168,75,0.1);border:1px solid rgba(200,168,75,0.25);
+  border-radius:12px;padding:1.2rem 1.5rem;margin-bottom:2rem;}
+.diff-note-title{font-family:'Cinzel',serif;font-size:0.85rem;color:var(--gold);
+  margin-bottom:0.5rem;letter-spacing:0.05em;}
+.diff-note-text{font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.7;}
+</style>
+</head>
+<body>
+
+<!-- Stars -->
+<div class="stars" id="stars"></div>
+<div class="progress" id="progress"></div>
+
+<nav class="nav">
+  <span class="nav-brand">Drum Earth</span>
+  <div class="nav-links">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#strategy" class="nav-link">Strategy</a>
+    <a href="#week1" class="nav-link">Week 1</a>
+    <a href="#week2" class="nav-link">Week 2</a>
+    <a href="#week3" class="nav-link">Week 3</a>
+    <a href="#week4" class="nav-link">Week 4</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="nebula nebula-1"></div>
+  <div class="nebula nebula-2"></div>
+  <div class="nebula nebula-3"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      Published Book — Social Media Calendar
+      <span class="live-badge"><span class="live-dot"></span>Live on Amazon</span>
+    </div>
+    <h1 class="hero-title">
+      <span>Trilogy</span>
+      Drum Earth
+    </h1>
+    <p class="hero-subtitle">Past lives. Spirit worlds. An ecological destiny spanning 20,000 years.<br>A published book that deserves the world to find it.</p>
+    <div class="hero-meta">
+      <span class="meta-chip">12 Posts</span>
+      <span class="meta-chip">4 Weeks</span>
+      <span class="meta-chip">Facebook · Instagram · BookTok · Amazon · Goodreads</span>
+      <span class="meta-chip">by A.J. Hugo Parker</span>
+    </div>
+    <div class="hero-cta">
+      <a href="https://www.amazon.co.uk" target="_blank" class="cta-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Available on Amazon Now
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">12</div><div class="stat-label">Total Posts</div></div>
+  <div class="stat"><div class="stat-num">4</div><div class="stat-label">Weeks</div></div>
+  <div class="stat"><div class="stat-num">5</div><div class="stat-label">Platforms</div></div>
+  <div class="stat"><div class="stat-num">3</div><div class="stat-label">Books in Trilogy</div></div>
+</div>
+
+<!-- ABOUT -->
+<div class="section-wrap" id="about">
+  <section class="about reveal">
+    <div class="section-label">About the book</div>
+    <h2 class="section-title">An Epic Spanning Centuries</h2>
+
+    <div class="book-banner">
+      <div class="book-cover-placeholder">DRUM<br>EARTH<br>TRILOGY</div>
+      <div class="book-info">
+        <div class="book-info-title">Drum Earth Trilogy</div>
+        <div class="book-info-author">A.J. Hugo Parker — Drum Earth Publishing</div>
+        <div class="book-info-desc">When Daniel goes to university, he doesn't realise his fate is already sealed. Spanning from the Lascaux caves 20,000 years ago to 2070, this extraordinary trilogy weaves past lives, spirit worlds, ecological destiny and one of the most unique love stories in modern fiction.</div>
+        <div class="book-tags">
+          <span class="book-tag">Past Lives</span>
+          <span class="book-tag">Spirit World</span>
+          <span class="book-tag">Ecological Thriller</span>
+          <span class="book-tag">Paranormal Fiction</span>
+          <span class="book-tag">Trilogy</span>
+          <span class="book-tag">Published</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-grid" style="margin-top:2rem;">
+      <div class="about-card">
+        <div class="about-card-icon">📖</div>
+        <div class="about-card-title">Three Books. One Journey.</div>
+        <div class="about-card-text">Book 1 — Daniel at university discovers spirit worlds. Book 2 — Love, loss, and a rescue mission in the Middle World. Book 3 — Spanning 33 years, Orlando and Dorian help Daniel fulfil his ecological destiny.</div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon">🌍</div>
+        <div class="about-card-title">20,000 Years of Spirit Cycles</div>
+        <div class="about-card-text">From Lascaux caves in 20,000 BPT to Canterbury in 1420, Mexico City in 1521, to modern England and a 2070 epilogue — the story of DRUM EARTH spans millennia of reincarnation and consequence.</div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon">✨</div>
+        <div class="about-card-title">Unique Characters</div>
+        <div class="about-card-text">Daniel, Francesca, Maisy, Stephen, Orlando, Dorian — each carrying the weight of past-life spirits. Animal guides: Panther, Bear, Horse, Eagle, Peregrine Falcon and Eagle Owl.</div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon">🌿</div>
+        <div class="about-card-title">The Call to DRUM EARTH</div>
+        <div class="about-card-text">At its heart, Drum Earth is a call to action — to save the planet from ecological disaster. The ORLANDOR Company's special trees and the 2070 epilogue make this a uniquely hopeful and visionary story.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY DIFFERENCE -->
+  <div class="diff-note reveal">
+    <div class="diff-note-title">★ Marketing Approach — Published Book</div>
+    <div class="diff-note-text">Unlike pre-launch marketing, every post in this calendar drives readers to <strong>buy, review, and share</strong> the book on Amazon and Goodreads right now. The strategy focuses on discoverability, social proof (reviews), and building a reader community around the trilogy. Amazon reviews are gold — this calendar is built around generating them.</div>
+  </div>
+</div>
+
+<!-- STRATEGY -->
+<div class="section-wrap" id="strategy">
+  <section class="strategy reveal">
+    <div class="section-label">The strategy</div>
+    <h2 class="section-title">Four Weeks to Build<br>a Reader Community</h2>
+    <p class="section-body">The book is live. Now the goal is to find its readers, earn reviews, and build word-of-mouth. Each week has a clear mission.</p>
+    <div class="strategy-grid">
+      <div class="strategy-card" data-week="1">
+        <div class="strategy-card-label">Week 1</div>
+        <div class="strategy-card-title">Announce & Drive to Amazon</div>
+        <div class="strategy-card-desc">Tell the world it's live. Introduce the world of Drum Earth. Every post ends with a direct link to buy on Amazon.</div>
+      </div>
+      <div class="strategy-card" data-week="2">
+        <div class="strategy-card-label">Week 2</div>
+        <div class="strategy-card-title">Hook with the Story</div>
+        <div class="strategy-card-desc">Character reveals, first-chapter teasers, and the spirit world concept. Make readers desperate to know what happens.</div>
+      </div>
+      <div class="strategy-card" data-week="3">
+        <div class="strategy-card-label">Week 3</div>
+        <div class="strategy-card-title">Social Proof & Reviews</div>
+        <div class="strategy-card-desc">Request Amazon reviews actively. Engage readers. Share early praise. Reviews = discoverability = sales.</div>
+      </div>
+      <div class="strategy-card" data-week="4">
+        <div class="strategy-card-label">Week 4</div>
+        <div class="strategy-card-title">Community & Momentum</div>
+        <div class="strategy-card-desc">Deep-dives on themes (ecology, past lives, spirit animals). Build a loyal community of readers who become ambassadors.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGEND -->
+  <div class="legend reveal">
+    <div class="legend-title">Post Types</div>
+    <div class="legend-items">
+      <span class="legend-pill" style="background:var(--announce-bg);color:var(--announce-fg)">Announce / Buy Now</span>
+      <span class="legend-pill" style="background:var(--story-bg);color:var(--story-fg)">Story Tease</span>
+      <span class="legend-pill" style="background:var(--hook-bg);color:var(--hook-fg)">Hook / Emotion</span>
+      <span class="legend-pill" style="background:var(--quote-bg);color:var(--quote-fg)">Quote / Insight</span>
+      <span class="legend-pill" style="background:var(--review-bg);color:var(--review-fg)">Review Request</span>
+      <span class="legend-pill" style="background:var(--engage-bg);color:var(--engage-fg)">Audience Engage</span>
+    </div>
+  </div>
+</div>
+
+<!-- CALENDAR -->
+<div class="section-wrap">
+<main class="calendar">
+
+  <!-- ── WEEK 1 ── -->
+  <section class="week-block reveal" id="week1">
+    <div class="week-header">
+      <div class="week-number">01</div>
+      <div class="week-info">
+        <div class="week-title">Announce &amp; Drive to Amazon</div>
+        <div class="week-dates">Monday · Wednesday · Friday</div>
+      </div>
+    </div>
+    <div class="posts-grid">
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:rgba(191,90,0,0.2);color:#FFB347;">1</div>
+          <div class="post-meta">
+            <div class="post-day">Monday — Week 1</div>
+            <div class="post-title">It's Live — Drum Earth Trilogy is on Amazon</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--announce-bg);color:var(--announce-fg)">Announce</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#8899BB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+          <span class="platform-pill pill-amz">Amazon</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">It's here. It's real. It's finally in your hands. 🌍✨
+
+DRUM EARTH TRILOGY by A.J. Hugo Parker is now available on Amazon.
+
+When Daniel goes to university, he has no idea his fate is already sealed.
+
+This isn't just a book. It's three lifetimes. Twenty thousand years of spirit cycles, reincarnation, loss, love and one man's extraordinary destiny to help save the planet.
+
+From the caves of Lascaux to a garden party in 2070 — Drum Earth is unlike anything you have ever read.
+
+📖 Link in bio to get your copy now.
+
+If you love: past lives · spirit worlds · paranormal fiction · ecological themes · epic storytelling
+
+This trilogy is waiting for you.
+
+#DrumEarth #DrumEarthTrilogy #AJHugoParker #NewBook #NowAvailable #Amazon #ParanormalFiction #PastLives #SpiritWorld #BookTok #BookRecommendation #MustRead</div>
+              <button class="copy-btn" onclick="copyCaption(this,event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Hero announcement graphic. Use the book cover as the centrepiece — full bleed, dramatic. Overlay a glowing blue/white radiant light effect emanating from the cover (matching the book's existing visual style of the spirit figure).
+
+Bold text overlay: "NOW AVAILABLE" in a cinematic serif font. Author name below. Gold star rating placeholder at bottom.
+
+For TikTok: Author or creative holding the physical book — dramatic reveal video. "POV: you finally hold the book you've been writing for years." Emotional, genuine. Soft ambient/celestial music.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:rgba(26,58,107,0.4);color:#8BA3E8;">2</div>
+          <div class="post-meta">
+            <div class="post-day">Wednesday — Week 1</div>
+            <div class="post-title">What is the Spirit World? — The World of Drum Earth</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--story-bg);color:var(--story-fg)">Story Tease</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#8899BB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">In the world of Drum Earth, reality has three layers. 🌌
+
+The Upper World — where good spirits reside.
+The Middle World — where evil spirits battle.
+The Lower World — where animal spirits guard ancient secrets.
+
+And between all three? The people of Earth, completely unaware.
+
+Until Daniel.
+
+Drum Earth Trilogy by A.J. Hugo Parker takes you into a spirit world mythology that feels ancient, real, and terrifyingly close to our own.
+
+Your animal spirit guides are waiting: Panther. Bear. Horse. Eagle. Peregrine Falcon. Eagle Owl.
+
+Which one calls to you? 🦅
+
+📖 Available now on Amazon — link in bio.
+
+#DrumEarth #SpiritWorld #OtherWorld #AnimalSpirits #SpiritualFiction #ParanormalBooks #BookTok #DrumEarthTrilogy #AJHugoParker</div>
+              <button class="copy-btn" onclick="copyCaption(this,event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">3-layer world diagram graphic. Dark space background with three horizontal realms stacked:
+Top: "Upper World" — soft golden light, ethereal figures.
+Middle: "Middle World" — dramatic red/dark energy, battle shadows.
+Bottom: "Lower World" — earthy tones, silhouettes of animals (bear, eagle, panther).
+
+Thin glowing dividing lines between worlds. Book cover small in corner. Text: "Three worlds. One destiny."
+
+For TikTok: Animated text reveal — each world appearing one by one with dramatic pause. Atmospheric sound design.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:rgba(91,31,168,0.3);color:#C088FF;">3</div>
+          <div class="post-meta">
+            <div class="post-day">Friday — Week 1</div>
+            <div class="post-title">Meet Daniel — The Man With a Sealed Fate</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--hook-bg);color:var(--hook-fg)">Hook / Emotion</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#8899BB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">Daniel goes to university thinking life is just beginning.
+
+He has no idea his fate was sealed 20,000 years ago.
+
+From the moment he meets Francesca and Maisy — and the mysterious Stephen — forces are unleashed that will shape the rest of his life, the lives of his children, and the future of the planet itself.
+
+By the time he understands his destiny, he has spent decades searching for the answer to a single question.
+
+What is the call of DRUM EARTH?
+
+And what must he sacrifice to answer it?
+
+📖 Drum Earth Trilogy by A.J. Hugo Parker
+Available now on Amazon — link in bio.
+
+One of the most extraordinary stories you will read this year. ✨
+
+#MeetDaniel #DrumEarth #AJHugoParker #FatedLove #SpiritualFiction #ParanormalRomance #EpicFiction #BookTok #DrumEarthTrilogy</div>
+              <button class="copy-btn" onclick="copyCaption(this,event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Single cinematic graphic. Use book cover as background with dark overlay. Central bold serif text: "His fate was sealed 20,000 years ago. He just didn't know it yet."
+
+Timeline visual element showing years: 20,000 BPT → 1420 → 1521 → 2025 → 2070. Small glowing dots connecting them like stars.
+
+For TikTok: "POV: you open a book and realise it's going to take over your life." Atmospheric, mysterious music. Close-up of book cover slowly coming into focus.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── WEEK 2 ── -->
+  <section class="week-block reveal" id="week2">
+    <div class="week-header">
+      <div class="week-number">02</div>
+      <div class="week-info">
+        <div class="week-title">Hook with the Story</div>
+        <div class="week-dates">Monday · Wednesday · Friday</div>
+      </div>
+    </div>
+    <div class="posts-grid">
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:rgba(0,96,100,0.3);color:#4DD0E1;">4</div>
+          <div class="post-meta">
+            <div class="post-day">Monday — Week 2</div>
+            <div class="post-title">Quote: "His fate was sealed." — Opening Lines</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--quote-bg);color:var(--quote-fg)">Quote / Insight</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#8899BB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+          <span class="platform-pill pill-gr">Goodreads</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">"When Daniel goes to university, he doesn't realise that his fate is already sealed."
+
+That. First. Line.
+
+From the very first sentence, A.J. Hugo Parker pulls you into a story that spans centuries, continents, and spirit worlds.
+
+This is the kind of opening that makes you stop. Re-read it. And then clear your entire weekend.
+
+📖 Drum Earth Trilogy — available now on Amazon.
+
+Have you read it? Drop a ⭐ rating in the comments and tell us what you think. Every review helps this extraordinary book find its readers.
+
+#DrumEarth #BookQuote #OpeningLine #ParanormalFiction #BookTok #AJHugoParker #MustRead #BookRecommendation #SpiritualFiction</div>
+              <button class="copy-btn" onclick="copyCaption(this,event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Elegant dark quote card. Deep space/navy background. Large serif italic quote in glowing white/light blue. Small decorative constellation pattern above the quote. Book cover thumbnail lower right. Gold star row at bottom.
+
+Feel: literary, atmospheric, cinematic.
+
+Two sizes: 1:1 IG feed, 4:5 portrait. Also a Goodreads-friendly version at 16:9.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:rgba(26,58,107,0.4);color:#8BA3E8;">5</div>
+          <div class="post-meta">
+            <div class="post-day">Wednesday — Week 2</div>
+            <div class="post-title">The Spirit Cycle — 20,000 Years of Reincarnation</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--story-bg);color:var(--story-fg)">Story Tease</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#8899BB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">Do you believe in past lives?
+
+In Drum Earth, the same souls have been finding each other — and destroying each other — for 20,000 years.
+
+🏔️ 20,000 BPT — Lascaux Caves, France. A young shaman named Kaylin sets something in motion without knowing it.
+
+⛪ 1420 — Canterbury, England. The same spirits are born again. A deadly pattern begins.
+
+🌺 1521 — Mexico City. The cycle intensifies. Jealousy. Betrayal. Unfinished business.
+
+📱 2025 — Present day. Daniel arrives at university. The cycle reaches its climax.
+
+Can it ever be broken?
+
+📖 Find out in Drum Earth Trilogy — available now on Amazon. Link in bio.
+
+#PastLives #DrumEarth #Reincarnation #SpiritCycle #ParanormalFiction #DrumEarthTrilogy #AJHugoParker #BookTok #HistoricalFiction</div>
+              <button class="copy-btn" onclick="copyCaption(this,event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Vertical timeline carousel — 4 slides + cover slide.
+
+Each slide: one era. Atmospheric illustration matching the location and period.
+Slide 1: Dark cave with glowing handprint paintings — Lascaux.
+Slide 2: Medieval Canterbury, moonlit cathedral silhouette.
+Slide 3: Aztec pyramid under a blood moon — Mexico City.
+Slide 4: Modern cityscape with a spirit figure overlaid in blue.
+Slide 5: Book cover + "The cycle ends here."
+
+Consistent deep navy/blue palette throughout. Gold timeline line connecting all slides.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:rgba(136,14,79,0.3);color:#F48FB1;">6</div>
+          <div class="post-meta">
+            <div class="post-day">Friday — Week 2</div>
+            <div class="post-title">The Ecological Heart — DRUM EARTH's Mission</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--hook-bg);color:var(--hook-fg)">Hook / Emotion</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#8899BB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">Twenty thousand years ago, a young shaman received a vision.
+
+He called it: DRUM EARTH.
+
+A mission so enormous that it would take an entire lifetime — and several reincarnations — to fulfil.
+
+In the epilogue of Drum Earth Trilogy, set in 2070, drone shots show millions of special fast-growing trees planted in logged rainforests all over the world. Each one reducing global heating.
+
+This is not just a fantasy novel. It is a story of hope.
+
+At a time when our planet needs it most, Drum Earth dares to imagine a future where we actually win.
+
+🌍 The ORLANDOR Company's trees are fictional. But the hope is real.
+
+📖 Drum Earth Trilogy by A.J. Hugo Parker — available now on Amazon. Link in bio.
+
+#DrumEarth #EcologicalFiction #ClimateHope #Reforestation #GreenFiction #DrumEarthTrilogy #BookTok #AJHugoParker #HopeForThePlanet</div>
+              <button class="copy-btn" onclick="copyCaption(this,event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Split emotional graphic. Top half: dramatic dark spirit world image (from book cover aesthetic). Bottom half: lush green forest with light breaking through the canopy. Dividing line with the word "DRUM EARTH" in glowing type.
+
+Message: "From the spirit world to the rainforest — this story travels further than you can imagine."
+
+For TikTok: Contrast video edit — dark spirit world footage cut with lush green nature footage. Text overlay: "A fantasy that might actually save the world." Cinematic score.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── WEEK 3 ── -->
+  <section class="week-block reveal" id="week3">
+    <div class="week-header">
+      <div class="week-number">03</div>
+      <div class="week-info">
+        <div class="week-title">Social Proof &amp; Reviews</div>
+        <div class="week-dates">Monday · Wednesday · Friday</div>
+      </div>
+    </div>
+    <div class="posts-grid">
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:rgba(230,81,0,0.25);color:#FFAB40;">7</div>
+          <div class="post-meta">
+            <div class="post-day">Monday — Week 3</div>
+            <div class="post-title">Please Leave a Review — Direct Ask</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--review-bg);color:var(--review-fg)">Review Request</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#8899BB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-amz">Amazon</span>
+          <span class="platform-pill pill-gr">Goodreads</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">To everyone who has already read Drum Earth Trilogy —
+
+I have a small but enormous favour to ask. 🙏
+
+If you enjoyed the book, could you please take two minutes to leave a review on Amazon?
+
+You don't need to write an essay. Even a sentence or two — "I loved the concept" or "couldn't put it down" — makes a world of difference.
+
+Here's why reviews matter so much:
+→ They help other readers find the book
+→ They help Amazon recommend it to new audiences
+→ They help a first-time author enormously
+
+Every single review is read. Every single one is appreciated more than I can say.
+
+📖 Amazon link is in my bio.
+⭐ Goodreads link is also there.
+
+Thank you. From the bottom of my heart.
+
+#DrumEarth #BookReview #AmazonReview #AJHugoParker #DrumEarthTrilogy #AuthorRequest #ReadersOfInstagram #BookCommunity #BookTok</div>
+              <button class="copy-btn" onclick="copyCaption(this,event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Warm, personal graphic. Author photo (candid, genuine) as background or insert. Large text: "If you've read it — please review it." Five gold stars prominent.
+
+Show both Amazon and Goodreads logos side by side with a simple instruction: "Takes 2 minutes. Means the world."
+
+For TikTok: Author speaking directly and genuinely to camera. No script feel — real, heartfelt ask. "If you've read Drum Earth, here's what would help me most right now..." Personal and vulnerable.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:rgba(136,14,79,0.3);color:#F48FB1;">8</div>
+          <div class="post-meta">
+            <div class="post-day">Wednesday — Week 3</div>
+            <div class="post-title">Reader Poll — Which Character Haunts You?</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--engage-bg);color:var(--engage-fg)">Audience Engage</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#8899BB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">If you've read Drum Earth — tell me:
+
+Which character lives in your head rent-free? 💭
+
+🌀 Daniel — the man who discovers his destiny too late
+💫 Francesca — who carries the grief of centuries
+🌑 Maisy — the one you can't quite forgive
+🦉 Stephen — whose spirit refuses to be silenced
+
+Comment below. And if you haven't read it yet — the descriptions alone might be enough to convince you.
+
+📖 Drum Earth Trilogy by A.J. Hugo Parker
+Available on Amazon now — link in bio.
+
+#DrumEarth #BookDiscussion #FavouriteCharacter #DrumEarthTrilogy #AJHugoParker #BookTok #ReaderCommunity #ParanormalFiction #WhichCharacter</div>
+              <button class="copy-btn" onclick="copyCaption(this,event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Four-panel character card graphic. Each panel: character name + one atmospheric mood image + a one-line description.
+Daniel — blue spirit energy
+Francesca — soft golden light fading
+Maisy — deep shadow with a red edge
+Stephen — ethereal white spirit form
+
+Clean dark background. Consistent typography. Book cover bottom strip. IG Stories version: interactive poll sticker with all four names.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:rgba(27,94,32,0.35);color:#81C784;">9</div>
+          <div class="post-meta">
+            <div class="post-day">Friday — Week 3</div>
+            <div class="post-title">Author Story — Why I Wrote Drum Earth</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--bts-bg);color:var(--bts-fg)">Behind the Scenes</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#8899BB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">People ask me: how do you write a trilogy spanning 20,000 years?
+
+The honest answer is — you don't plan it. It grows.
+
+Drum Earth started with a single image in my mind: a young man at university who has no idea the forces already moving around him.
+
+From that one moment, the world of Drum Earth unfolded — the past lives, the spirit worlds, the ecological mission, the characters who felt so real to me I grieved when they died.
+
+Writing this trilogy was one of the greatest journeys of my life. And now it's your journey too.
+
+What made you pick up the book? I'd love to know in the comments. 💬
+
+📖 Drum Earth Trilogy by A.J. Hugo Parker
+Published by Drum Earth Publishing
+Available on Amazon now — link in bio.
+
+#AuthorStory #DrumEarth #WhyIWrite #AJHugoParker #WritingJourney #DrumEarthTrilogy #BookTok #DebautAuthor #AuthorLife</div>
+              <button class="copy-btn" onclick="copyCaption(this,event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Intimate author graphic. Author photo in warm light — candid, writing desk or nature setting. Overlay quote: "Writing this trilogy was one of the greatest journeys of my life."
+
+Warm but atmospheric — not too corporate. Handwritten or organic font accent. Book cover insert bottom corner.
+
+For TikTok: Author on camera, no script. Just talking about the moment the book idea arrived. Real, personal, vivid. 60–90 seconds. End with a slow close-up of the book cover on a table.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── WEEK 4 ── -->
+  <section class="week-block reveal" id="week4">
+    <div class="week-header">
+      <div class="week-number">04</div>
+      <div class="week-info">
+        <div class="week-title">Community &amp; Momentum</div>
+        <div class="week-dates">Monday · Wednesday · Friday</div>
+      </div>
+    </div>
+    <div class="posts-grid">
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:rgba(136,14,79,0.3);color:#F48FB1;">10</div>
+          <div class="post-meta">
+            <div class="post-day">Monday — Week 4</div>
+            <div class="post-title">Do You Believe in Past Lives? — Audience Question</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--engage-bg);color:var(--engage-fg)">Audience Engage</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#8899BB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">Do you believe in past lives? 🌀
+
+Have you ever met someone and felt an inexplicable, immediate connection — as if you've known them for centuries?
+
+Have you ever been somewhere for the first time and felt you've been there before?
+
+In Drum Earth, the characters don't just believe in past lives. They are living proof that the mistakes of one life echo through thousands of years.
+
+Daniel. Francesca. Maisy. Stephen. Their souls have been colliding since the caves of Lascaux.
+
+Tell me in the comments — do you believe? And have you ever experienced something you couldn't explain? 👇
+
+📖 Drum Earth Trilogy by A.J. Hugo Parker explores these questions like no other book I've read.
+Available now on Amazon — link in bio.
+
+#PastLives #Reincarnation #DoYouBelieve #DrumEarth #SpiritualFiction #AJHugoParker #DrumEarthTrilogy #BookTok #DejaVu</div>
+              <button class="copy-btn" onclick="copyCaption(this,event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Bold question graphic. Deep starfield background. Large text: "Do you believe in past lives?" in Cinzel-style dramatic serif. Below: silhouettes of two people on opposite sides reaching toward each other across time — ghostly, ethereal.
+
+IG Stories: Yes/No poll sticker version. BookTok: Atmospheric video about past life experiences, overlaid with book visuals.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:rgba(0,96,100,0.3);color:#4DD0E1;">11</div>
+          <div class="post-meta">
+            <div class="post-day">Wednesday — Week 4</div>
+            <div class="post-title">The Animal Spirit Guides — Which is Yours?</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--quote-bg);color:var(--quote-fg)">Quote / Insight</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#8899BB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">In the Lower World of Drum Earth, animal spirits are the guardians. The guides. The messengers.
+
+🐾 Panther — strength in darkness
+🐻 Bear — protection and nurturing
+🐴 Horse — freedom and power
+🦅 Eagle — vision from above
+🦅 Peregrine Falcon — speed and precision
+🦉 Eagle Owl — wisdom in the dark
+
+And then there are Jet the cat and Red the black redstart bird — Stephen's personal messengers, who travel between worlds.
+
+Which animal calls to you? Which spirit would guide you through the Middle World?
+
+Tell me in the comments 🐾
+
+📖 Drum Earth Trilogy by A.J. Hugo Parker
+Available now on Amazon — link in bio.
+
+#AnimalSpirits #SpiritAnimal #DrumEarth #SpiritWorld #AJHugoParker #DrumEarthTrilogy #BookTok #Shaman #AnimalGuides</div>
+              <button class="copy-btn" onclick="copyCaption(this,event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Vibrant carousel — 6 slides (one per animal).
+
+Each slide: stunning illustration of the animal in an ethereal spirit-world style. Glowing edges, cosmic dark background. Animal name and 3-word description.
+
+Panther: deep shadows, midnight blue.
+Bear: warm amber glow.
+Eagle: soaring above clouds, golden light.
+Peregrine Falcon: electric speed blur.
+Eagle Owl: moonlit wisdom, silver tones.
+
+Final slide: "Which spirit calls to you?" with all six together + book cover.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:rgba(191,90,0,0.2);color:#FFB347;">12</div>
+          <div class="post-meta">
+            <div class="post-day">Friday — Week 4</div>
+            <div class="post-title">Month 1 Closing — Thank You &amp; Keep Going</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--announce-bg);color:var(--announce-fg)">Announce</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#8899BB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+          <span class="platform-pill pill-amz">Amazon</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">One month in.
+
+And Drum Earth is finding its readers. 🌍✨
+
+To everyone who has bought the book, left a review, shared a post, or simply stopped to read a caption — thank you. Genuinely.
+
+This story waited a long time to be told. You are the reason it exists in the world.
+
+If you haven't picked it up yet — this is your sign.
+
+📖 Drum Earth Trilogy by A.J. Hugo Parker
+
+A story about:
+→ Who we were before this life
+→ What we owe the ones we've wronged across centuries
+→ And what one person can do to help save the planet
+
+Available now on Amazon — link in bio.
+
+And more is coming. More stories. More characters. More world.
+
+Stay close. 🌌
+
+#DrumEarth #ThankYou #DrumEarthTrilogy #AJHugoParker #BookCommunity #AvailableNow #Amazon #BookTok #SpiritualFiction #OneMonthIn</div>
+              <button class="copy-btn" onclick="copyCaption(this,event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 12 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Cinematic closing graphic. Book cover prominently featured — possibly held up against a night sky or a glowing horizon. Warm light breaking through, hopeful.
+
+Text overlay: "One month in. Still just the beginning." Stars and constellations in background.
+
+For TikTok: Author holding the physical book, speaking to camera. Emotional, warm, real. "Here's what this first month has meant to me..." End with a beautiful slow pan of the book cover and a call to action to buy + review on Amazon.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+</div>
+
+<!-- AMAZON TIPS -->
+<div class="section-wrap">
+  <section class="amazon-section reveal">
+    <div class="section-label">Maximise your reach</div>
+    <h2 class="section-title">Amazon & Goodreads<br>Power Tips</h2>
+    <div class="amazon-grid">
+      <div class="amazon-card">
+        <div class="amazon-card-icon">⭐</div>
+        <div class="amazon-card-title">Reviews = Visibility</div>
+        <div class="amazon-card-text">Amazon's algorithm rewards books with reviews. Even 10–15 reviews significantly boost discoverability. Ask every reader directly.</div>
+      </div>
+      <div class="amazon-card">
+        <div class="amazon-card-icon">🔗</div>
+        <div class="amazon-card-title">Link in Bio Always</div>
+        <div class="amazon-card-text">Every single post should have "Amazon link in bio." Change your bio link to the Amazon page and keep it there permanently.</div>
+      </div>
+      <div class="amazon-card">
+        <div class="amazon-card-icon">📚</div>
+        <div class="amazon-card-title">Goodreads Profile</div>
+        <div class="amazon-card-text">Set up an author profile on Goodreads. Add the book. Ask readers to add it to their "Want to Read" shelf — this builds organic visibility.</div>
+      </div>
+      <div class="amazon-card">
+        <div class="amazon-card-icon">🎯</div>
+        <div class="amazon-card-title">Target Hashtags</div>
+        <div class="amazon-card-text">#BookTok #PastLives #SpiritualFiction #ParanormalRomance #EcologicalFiction #Reincarnation — these are your core discovery tags.</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-title">Drum Earth Trilogy</div>
+  <div class="footer-divider"></div>
+  <p class="footer-sub">Social Media Marketing Calendar — Month 1 &nbsp;·&nbsp; A.J. Hugo Parker &nbsp;·&nbsp; Drum Earth Publishing</p>
+  <p class="footer-sub" style="margin-top:8px;font-size:0.75rem;opacity:0.4;">3 posts per week · Mon / Wed / Fri · All captions are draft — review before publishing</p>
+</footer>
+
+<script>
+// Stars
+(function(){
+  const c = document.getElementById('stars');
+  for(let i=0;i<120;i++){
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random()*2+0.5;
+    s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--d:${(Math.random()*4+2).toFixed(1)}s;--delay:-${(Math.random()*4).toFixed(1)}s;--min:${(Math.random()*0.1).toFixed(2)};--max:${(Math.random()*0.6+0.3).toFixed(2)};`;
+    c.appendChild(s);
+  }
+})();
+
+// Progress
+window.addEventListener('scroll',()=>{
+  const p=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
+  document.getElementById('progress').style.width=p+'%';
+});
+
+// Toggle
+function toggle(card){
+  const isOpen=card.classList.contains('open');
+  document.querySelectorAll('.post-card.open').forEach(c=>c.classList.remove('open'));
+  if(!isOpen) card.classList.add('open');
+}
+
+// Copy
+function copyCaption(btn,e){
+  e.stopPropagation();
+  const text=btn.previousElementSibling.innerText;
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.classList.add('copied');
+    btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied!`;
+    setTimeout(()=>{
+      btn.classList.remove('copied');
+      btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy Caption`;
+    },2000);
+  });
+}
+
+// Reveal
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*60);obs.unobserve(e.target);}
+  });
+},{threshold:0.07});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
