@@ -1349,29 +1349,32 @@ const obs=new IntersectionObserver(entries=>{
 },{threshold:0.07});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-// Expand buttons for long designer briefs
+// Expand buttons — carousel briefs only (identified by .slide-label children)
 document.querySelectorAll('.designer-box').forEach(box=>{
-  if(box.scrollHeight>210){
-    const wrap=document.createElement('div');
-    wrap.className='designer-box-wrap';
-    box.parentNode.insertBefore(wrap,box);
-    wrap.appendChild(box);
+  if(!box.querySelector('.slide-label')) return;
 
-    const fade=document.createElement('div');
-    fade.className='brief-fade';
-    wrap.appendChild(fade);
+  const wrap=document.createElement('div');
+  wrap.className='designer-box-wrap';
+  box.parentNode.insertBefore(wrap,box);
+  wrap.appendChild(box);
 
-    const btn=document.createElement('button');
-    btn.className='brief-expand-btn';
-    btn.textContent='▼ See all slides';
-    btn.addEventListener('click',e=>{
-      e.stopPropagation();
-      const expanded=box.classList.toggle('expanded');
-      fade.style.opacity=expanded?'0':'1';
-      btn.textContent=expanded?'▲ Collapse':'▼ See all slides';
-    });
-    wrap.appendChild(btn);
-  }
+  const fade=document.createElement('div');
+  fade.className='brief-fade';
+  wrap.appendChild(fade);
+
+  const btn=document.createElement('button');
+  btn.className='brief-expand-btn';
+  btn.textContent='▼ See all slides';
+  btn.addEventListener('click',e=>{
+    e.stopPropagation();
+    const expanded=box.classList.toggle('expanded');
+    fade.style.opacity=expanded?'0':'1';
+    btn.textContent=expanded?'▲ Collapse':'▼ See all slides';
+    // Unlock the parent post-detail height when expanding
+    const postDetail=box.closest('.post-detail');
+    if(postDetail) postDetail.style.maxHeight=expanded?postDetail.scrollHeight+2000+'px':'';
+  });
+  wrap.appendChild(btn);
 });
 </script>
 </body>
