@@ -233,9 +233,25 @@ body{font-family:'DM Sans',sans-serif;background:var(--deep);color:var(--cream);
 .caption-box{background:rgba(255,255,255,0.04);border-left:3px solid var(--glow);
   border-radius:0 12px 12px 0;padding:1rem 1.25rem;font-size:0.87rem;line-height:1.8;
   color:rgba(255,255,255,0.85);white-space:pre-line;font-family:'Crimson Pro',serif;}
+.designer-box-wrap{position:relative;}
+
 .designer-box{background:rgba(74,158,255,0.06);border-left:3px solid var(--cyan);
-  border-radius:0 12px 12px 0;padding:1rem 1.25rem;font-size:0.87rem;line-height:1.8;
-  color:rgba(100,180,255,0.9);font-style:italic;white-space:pre-line;word-break:break-word;}
+  border-radius:0 12px 0 0;padding:1rem 1.25rem;font-size:0.87rem;line-height:1.8;
+  color:rgba(100,180,255,0.9);font-style:italic;white-space:pre-line;word-break:break-word;
+  max-height:200px;overflow:hidden;transition:max-height 0.45s ease;}
+
+.designer-box.expanded{max-height:3000px;}
+
+.brief-fade{position:absolute;bottom:32px;left:0;right:0;height:56px;
+  background:linear-gradient(to bottom,transparent,#070d1c);
+  pointer-events:none;transition:opacity 0.3s;}
+
+.brief-expand-btn{display:block;width:100%;padding:7px 0;font-size:0.7rem;
+  font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;
+  border:none;border-radius:0 0 12px 12px;
+  background:rgba(74,158,255,0.12);color:var(--cyan);
+  transition:background 0.2s,color 0.2s;}
+.brief-expand-btn:hover{background:var(--cyan);color:#060B16;}
 
 .slide-copy{display:inline;background:rgba(200,168,75,0.25);color:#FFD060;
   font-style:normal;font-weight:600;border-radius:3px;padding:1px 5px;}
@@ -1332,6 +1348,31 @@ const obs=new IntersectionObserver(entries=>{
   });
 },{threshold:0.07});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Expand buttons for long designer briefs
+document.querySelectorAll('.designer-box').forEach(box=>{
+  if(box.scrollHeight>210){
+    const wrap=document.createElement('div');
+    wrap.className='designer-box-wrap';
+    box.parentNode.insertBefore(wrap,box);
+    wrap.appendChild(box);
+
+    const fade=document.createElement('div');
+    fade.className='brief-fade';
+    wrap.appendChild(fade);
+
+    const btn=document.createElement('button');
+    btn.className='brief-expand-btn';
+    btn.textContent='▼ See all slides';
+    btn.addEventListener('click',e=>{
+      e.stopPropagation();
+      const expanded=box.classList.toggle('expanded');
+      fade.style.opacity=expanded?'0':'1';
+      btn.textContent=expanded?'▲ Collapse':'▼ See all slides';
+    });
+    wrap.appendChild(btn);
+  }
+});
 </script>
 </body>
 </html>

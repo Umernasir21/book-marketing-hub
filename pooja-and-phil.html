@@ -497,10 +497,14 @@ body {
   white-space: pre-line;
 }
 
+.designer-box-wrap {
+  position: relative;
+}
+
 .designer-box {
   background: #F0F6FF;
   border-left: 3px solid #378ADD;
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 12px 0 0;
   padding: 1rem 1.25rem;
   font-size: 0.85rem;
   line-height: 1.75;
@@ -508,6 +512,45 @@ body {
   font-style: italic;
   white-space: pre-line;
   word-break: break-word;
+  max-height: 200px;
+  overflow: hidden;
+  transition: max-height 0.45s ease;
+}
+
+.designer-box.expanded {
+  max-height: 3000px;
+  border-radius: 0 12px 0 0;
+}
+
+.brief-fade {
+  position: absolute;
+  bottom: 32px;
+  left: 0; right: 0;
+  height: 56px;
+  background: linear-gradient(to bottom, transparent, #F0F6FF);
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.brief-expand-btn {
+  display: block;
+  width: 100%;
+  padding: 7px 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 0 0 12px 12px;
+  background: #dbeafe;
+  color: #378ADD;
+  transition: background 0.2s, color 0.2s;
+}
+
+.brief-expand-btn:hover {
+  background: #378ADD;
+  color: #fff;
 }
 
 .designer-box strong,
@@ -1546,6 +1589,31 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.08 });
 reveals.forEach(el => observer.observe(el));
+
+// Expand buttons for long designer briefs
+document.querySelectorAll('.designer-box').forEach(box => {
+  if (box.scrollHeight > 210) {
+    const wrap = document.createElement('div');
+    wrap.className = 'designer-box-wrap';
+    box.parentNode.insertBefore(wrap, box);
+    wrap.appendChild(box);
+
+    const fade = document.createElement('div');
+    fade.className = 'brief-fade';
+    wrap.appendChild(fade);
+
+    const btn = document.createElement('button');
+    btn.className = 'brief-expand-btn';
+    btn.textContent = '▼ See all slides';
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const expanded = box.classList.toggle('expanded');
+      fade.style.opacity = expanded ? '0' : '1';
+      btn.textContent = expanded ? '▲ Collapse' : '▼ See all slides';
+    });
+    wrap.appendChild(btn);
+  }
+});
 </script>
 </body>
 </html>
