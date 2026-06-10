@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pooja & Phil — Pre-Launch Social Media Calendar</title>
+<title>Pooja & Phil — 3-Month Social Media Calendar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -649,6 +649,50 @@ body {
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
+/* ── MONTH DIVIDER ───────────────────────────────────── */
+.month-divider {
+  max-width: 960px;
+  margin: 5rem auto 3rem;
+  padding: 0 2rem;
+}
+.month-divider-inner {
+  border-top: 3px solid var(--deep);
+  padding-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.month-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--deep);
+  color: var(--amber);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+.month-divider-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: var(--deep);
+  line-height: 1.15;
+}
+.month-divider-desc {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 560px;
+}
+
 </style>
 </head>
 <body>
@@ -659,10 +703,9 @@ body {
   <span class="nav-brand">Pooja &amp; Phil</span>
   <div class="nav-links">
     <a href="#strategy" class="nav-link">Strategy</a>
-    <a href="#week1" class="nav-link">Week 1</a>
-    <a href="#week2" class="nav-link">Week 2</a>
-    <a href="#week3" class="nav-link">Week 3</a>
-    <a href="#week4" class="nav-link">Week 4</a>
+    <a href="#month1" class="nav-link">Month 1</a>
+    <a href="#month2" class="nav-link">Month 2</a>
+    <a href="#month3" class="nav-link">Month 3</a>
   </div>
 </nav>
 
@@ -673,12 +716,12 @@ body {
   <div class="orb orb-2"></div>
   <div class="orb orb-3"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Pre-Launch Marketing Calendar</div>
+    <div class="hero-eyebrow">3-Month Social Media Calendar</div>
     <h1 class="hero-title">Pooja<br>&amp; <em>Phil</em></h1>
-    <p class="hero-subtitle">A month-by-month social media strategy to build your audience before the launch. Every caption. Every designer brief. Ready to go.</p>
+    <p class="hero-subtitle">Pre-launch build-up, launch week explosion, and two months of post-launch community growth. Every caption. Every designer brief. Ready to go.</p>
     <div class="hero-meta">
-      <span class="meta-chip">12 Posts</span>
-      <span class="meta-chip">4 Weeks</span>
+      <span class="meta-chip">36 Posts</span>
+      <span class="meta-chip">12 Weeks</span>
       <span class="meta-chip">Facebook · Instagram · BookTok</span>
       <span class="meta-chip">by Bansi Pattni</span>
     </div>
@@ -691,17 +734,17 @@ body {
 
 <!-- STATS BAR -->
 <div class="stats-bar">
-  <div class="stat"><div class="stat-num">12</div><div class="stat-label">Total Posts</div></div>
-  <div class="stat"><div class="stat-num">4</div><div class="stat-label">Weeks</div></div>
-  <div class="stat"><div class="stat-num">3</div><div class="stat-label">Platforms</div></div>
+  <div class="stat"><div class="stat-num">36</div><div class="stat-label">Total Posts</div></div>
+  <div class="stat"><div class="stat-num">12</div><div class="stat-label">Weeks</div></div>
+  <div class="stat"><div class="stat-num">3</div><div class="stat-label">Months</div></div>
   <div class="stat"><div class="stat-num">3×</div><div class="stat-label">Per Week</div></div>
 </div>
 
 <!-- STRATEGY -->
 <section class="strategy reveal" id="strategy">
   <div class="section-label">The strategy</div>
-  <h2 class="strategy-title">Four weeks. One story.<br>An audience that can't wait.</h2>
-  <p style="color:var(--muted);line-height:1.8;max-width:600px;">Each week builds on the last — from curiosity to emotion to community. By Week 4, your readers aren't just followers. They're invested.</p>
+  <h2 class="strategy-title">Three months. One story.<br>A community that grows with you.</h2>
+  <p style="color:var(--muted);line-height:1.8;max-width:600px;">Month 1 builds the audience before launch. Month 2 captures the launch energy. Month 3 sustains momentum, deepens community, and drives long-tail sales.</p>
 
   <div class="strategy-grid">
     <div class="strategy-card" data-week="1">
@@ -742,6 +785,9 @@ body {
 
 <!-- CALENDAR -->
 <main class="calendar">
+
+  <!-- ── MONTH 1 ANCHOR ── -->
+  <div id="month1"></div>
 
   <!-- ── WEEK 1 ── -->
   <section class="week-block reveal" id="week1">
@@ -1498,13 +1544,1589 @@ TikTok: Author to camera, genuine, no edits · slow book cover reveal at end</di
     </div>
   </section>
 
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- MONTH 2 DIVIDER                            -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="month-divider reveal" id="month2">
+    <div class="month-divider-inner">
+      <span class="month-badge">Month 2 — Launch</span>
+      <div>
+        <div class="month-divider-title">The Book is Out.<br>Now Own the Moment.</div>
+        <div class="month-divider-desc">Launch week energy, character deep-dives, cultural moments, early reviews, and community building. Four weeks of posts designed to turn followers into readers — and readers into advocates.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WEEK 5 ── -->
+  <section class="week-block reveal" id="week5">
+    <div class="week-header">
+      <div class="week-number">05</div>
+      <div class="week-info">
+        <div class="week-title">Launch Week — The Book is Here</div>
+        <div class="week-dates">Monday · Wednesday · Friday — Launch Days 1, 3, 5</div>
+      </div>
+    </div>
+    <div class="posts-grid">
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--announce-bg);color:var(--announce-fg)">13</div>
+          <div class="post-meta">
+            <div class="post-day">Monday — Launch Day</div>
+            <div class="post-title">It's Here — Official Book Launch Announcement</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--announce-bg);color:var(--announce-fg)">Announce</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">The wait is over. POOJA AND PHIL is officially OUT NOW. 🎊
+
+A girl with masala tea, big dreams, and a dance in her heart.
+A man who built an empire — and lost himself inside it.
+Neither expected the other to change everything.
+
+This is the story that needed to exist.
+
+Get your copy NOW — link in bio 📚
+
+#PoojaAndPhil #OutNow #BookLaunch #BritishAsian #BollywoodMeetsWestEnd #DiverseFiction #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Single launch graphic · 1:1, 4:5, 9:16 Stories
+BG: Book cover full-bleed with vibrant marigold/Bollywood confetti overlay
+Bold text strip across bottom: <span class="slide-copy">OUT NOW</span> — white, large serif
+Sub-strip: <span class="slide-copy">Pooja &amp; Phil · by Bansi Pattni</span>
+Add "available now" pill in orange, bottom-right corner
+
+TikTok: Author to camera — emotional, excited, genuine. Hold the physical book. End with book cover close-up.
+
+Stories: Countdown timer expired → animated celebration with "IT'S HERE!" bold text + link sticker to purchase page.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--hook-bg);color:var(--hook-fg)">14</div>
+          <div class="post-meta">
+            <div class="post-day">Wednesday — Day 3</div>
+            <div class="post-title">Masala Tea Moment — The Cultural Heart</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--hook-bg);color:var(--hook-fg)">Hook / Emotion</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">A cup of masala tea is never just tea.
+
+It's a hug from your mum on a frosty morning.
+It's motivation in a mug.
+It's home. ☕🤎
+
+Pooja starts every day with one. And so do I.
+
+If you know, you know.
+
+Grab your copy and settle in — link in bio 📚
+
+#MasalaTea #BritishAsian #SouthAsianVibes #PoojaAndPhil #CulturalMoments #ChaiLovers #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Reel / short video (15–30 sec) · 9:16 vertical + 1:1 crop for feed
+Aesthetic flat-lay: masala tea mug steaming, spices arranged around it, book cover propped nearby on warm wooden surface
+
+On-screen text (white serif, fading in line by line):
+<span class="slide-copy">"A cup of masala tea is never just tea."</span>
+<span class="slide-copy">"It's a hug from your mum on a frosty morning."</span>
+<span class="slide-copy">"It's home."</span>
+
+End frame: book cover + <span class="slide-copy">Available now · link in bio</span>
+Music: soft Bollywood instrumental or warm acoustic
+
+Stories version: same visual with "How do you take your chai?" poll sticker</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--engage-bg);color:var(--engage-fg)">15</div>
+          <div class="post-meta">
+            <div class="post-day">Friday — Day 5</div>
+            <div class="post-title">First Reader Reactions — Early Reviews</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--engage-bg);color:var(--engage-fg)">Audience Engage</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">The readers have spoken. 🌟🌟🌟🌟🌟
+
+"I saw myself in every page of this book."
+"Pooja is the representation I've been waiting for my whole life."
+"I laughed, I cried, I danced in my kitchen."
+
+This is what it's all about. 🥹
+
+If you've started reading — where are you? Drop your page number below (no spoilers!).
+
+If you haven't started yet — link in bio 📚
+
+#PoojaAndPhil #BookReview #5StarRead #RepresentationMatters #Bookstagram #BookTok #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">3-slide Carousel · 1:1 and 4:5
+Palette: Cream background, star icons in amber/orange
+
+<span class="slide-label">SLIDE 1</span>
+BG: Cream/warm white, 5 amber stars at top
+<span class="slide-copy">EARLY READERS ARE SAYING...</span> — small label, orange, top
+<span class="slide-copy">"I saw myself in every page of this book."</span> — large serif italic, dark brown
+
+<span class="slide-label">SLIDE 2</span>
+Same layout
+<span class="slide-copy">"Pooja is the representation I've been waiting for my whole life."</span>
+
+<span class="slide-label">SLIDE 3</span>
+BG: Orange (#E8612A), white text
+<span class="slide-copy">Your turn. Get your copy.</span> — large white serif
+<span class="slide-copy">Pooja &amp; Phil · Link in bio</span> — smaller, below
+Visual: Book cover centred, bottom half of slide</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── WEEK 6 ── -->
+  <section class="week-block reveal" id="week6">
+    <div class="week-header">
+      <div class="week-number">06</div>
+      <div class="week-info">
+        <div class="week-title">Characters, Culture &amp; Humour</div>
+        <div class="week-dates">Monday · Wednesday · Friday — Days 8, 10, 12</div>
+      </div>
+    </div>
+    <div class="posts-grid">
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--engage-bg);color:var(--engage-fg)">16</div>
+          <div class="post-meta">
+            <div class="post-day">Monday — Day 8</div>
+            <div class="post-title">The Aunties Scene — Relatable Humour</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--engage-bg);color:var(--engage-fg)">Audience Engage</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">"Get a real job. You're young. Look at your brother."
+
+If you've ever been on the receiving end of an auntie's unsolicited life advice — Pooja sees you. 😅💛
+
+She heard it at Tesco. She heard it at the engagement party. She heard it everywhere.
+
+And still she kept dancing.
+
+Tag an auntie who needs to read this book... or maybe don't. 😂
+
+#TheAunties #BritishAsian #CommunityPressure #SouthAsianHumour #PoojaAndPhil #Relatable #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Single graphic · 1:1 and 4:5
+BG: Warm cream, playful but not cartoonish
+Visual: Illustration of two aunties with grocery bags, knowing smiles — or a split panel of three "auntie quote" speech bubbles
+
+Speech bubbles (use real quotes from the book):
+<span class="slide-copy">"Get a real job."</span>
+<span class="slide-copy">"Look at your brother."</span>
+<span class="slide-copy">"Have you started looking for a boy?"</span>
+
+Bottom strip: <span class="slide-copy">Pooja heard it all. She kept dancing anyway.</span> — orange serif
+Small book cover bottom-right
+
+TikTok: Trending audio format — "things every South Asian auntie has said" with on-screen text matching the book's auntie dialogue</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--story-bg);color:var(--story-fg)">17</div>
+          <div class="post-meta">
+            <div class="post-day">Wednesday — Day 10</div>
+            <div class="post-title">Phil's Transformation — The Redemption Arc</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--story-bg);color:var(--story-fg)">Story Tease</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">He was insufferable.
+He was brilliant.
+He was broken.
+
+But somewhere between the shouting and the silence, Phil Rivers became someone worth rooting for.
+
+That's the magic of this story — transformation doesn't arrive all at once. It comes piece by piece.
+
+Sometimes quietly. Sometimes on a park bench with a canvas and a picnic basket.
+
+📖 Pooja &amp; Phil — available now. Link in bio.
+
+#PhilRivers #CharacterArc #RedemptionArc #PoojaAndPhil #DisabilityRepresentation #BookTok #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">2-panel graphic · 1:1 and 4:5
+
+Left panel (dark, moody): Silhouetted wheelchair at window, corporate — cold blue/grey tones
+<span class="slide-copy">Phil at the start.</span> — small italic label, white
+
+Right panel (warm, soft): Paintbrush resting on canvas, outdoor setting, warm light — amber/ochre tones
+<span class="slide-copy">Phil at the end.</span> — small italic label, cream
+
+Centre divider: thin orange vertical line
+
+Bottom strip (dark brown): <span class="slide-copy">Some transformations arrive quietly. Pooja &amp; Phil — out now.</span>
+
+TikTok: "Enemies to... something" format — moody to warm transition cut, with the book title reveal at the end</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--hook-bg);color:var(--hook-fg)">18</div>
+          <div class="post-meta">
+            <div class="post-day">Friday — Day 12</div>
+            <div class="post-title">Navratri &amp; Garba — Cultural Celebration</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--hook-bg);color:var(--hook-fg)">Hook / Emotion</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">For 9 nights every year, Pooja dances like her problems don't exist.
+
+This is the magic of Navratri — of Garba — of coming alive to music that's in your blood.
+
+A blue and white skirt covered in tiny plastic mirrors.
+Intricate designs.
+A circumference that says: I am here. I am celebrating. I am alive. ✨
+
+Whether you know Navratri or you're discovering it for the first time through this story — this dance will make you feel something.
+
+📖 Pooja &amp; Phil — available now. Link in bio.
+
+#Navratri #Garba #GujaratiCulture #BritishAsian #IndianDance #PoojaAndPhil #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Reel / video · 9:16 vertical + 1:1 static fallback
+Visual: Garba skirt spinning, tiny mirrors catching light — slow-motion preferred
+Colour palette: Deep jewel tones — cobalt blue, rich red, gold, white
+
+Static fallback (1:1): Close-up of garba skirt fabric with mirror embroidery
+Text overlay (white serif):
+<span class="slide-copy">"For 9 nights every year, Pooja dances like her problems don't exist."</span>
+<span class="slide-copy">— Pooja &amp; Phil, by Bansi Pattni</span>
+Small book cover lower-right corner
+
+TikTok: Aesthetic garba dance clip (can use stock or author's own footage) with the quote appearing as text overlay. Bollywood instrumental music.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── WEEK 7 ── -->
+  <section class="week-block reveal" id="week7">
+    <div class="week-header">
+      <div class="week-number">07</div>
+      <div class="week-info">
+        <div class="week-title">Identity, Representation &amp; Reviews</div>
+        <div class="week-dates">Monday · Wednesday · Friday — Days 15, 17, 19</div>
+      </div>
+    </div>
+    <div class="posts-grid">
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--quote-bg);color:var(--quote-fg)">19</div>
+          <div class="post-meta">
+            <div class="post-day">Monday — Day 15</div>
+            <div class="post-title">Quote Card — "Proudly Both" Identity</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--quote-bg);color:var(--quote-fg)">Quote / Insight</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">"I love being a fusion of being British and Indian and I am not ready to abandon either aspect of my identity."
+— Pooja, from Pooja &amp; Phil 🇬🇧🇮🇳
+
+For every first or second-generation person who was told to choose.
+
+For everyone who grew up eating chappatis and fish and chips and saw no contradiction in that.
+
+Pooja is proudly both. Fully both. Without apology.
+
+This book is for you. 💛
+
+Save this if it hits home. Share it with someone who needs it.
+
+#FirstGen #BritishAsian #SouthAsianDiaspora #CulturalIdentity #PoojaAndPhil #RepresentationMatters #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Quote card · 1:1 and 4:5
+BG: Split diagonal — left half warm terracotta/orange, right half cool navy/deep teal
+Centre: Quote text in bold white serif, straddling the split
+
+<span class="slide-copy">"I love being a fusion of being British and Indian and I am not ready to abandon either aspect of my identity."</span>
+— large serif, white, centred
+<span class="slide-copy">— Pooja, Pooja &amp; Phil · Bansi Pattni</span> — attribution, smaller, below quote
+
+Small flags (🇬🇧 🇮🇳) as subtle design accent, not emoji — use flat illustrated style
+Book cover small, bottom-right
+
+Stories version: same quote + "Which culture shaped you most? Both? Vote below" → poll sticker</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--bts-bg);color:var(--bts-fg)">20</div>
+          <div class="post-meta">
+            <div class="post-day">Wednesday — Day 17</div>
+            <div class="post-title">Dementia &amp; Disability — Sensitive Representation</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--bts-bg);color:var(--bts-fg)">Behind the Scenes</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">Philip Rivers is not defined by his wheelchair.
+He is not defined by his diagnosis.
+
+He is defined by his rage, his tenderness, his complexity — his love.
+
+Pooja and Phil doesn't look away from the hard things.
+It sits with them. 💙
+
+Disability and dementia are woven into this story with honesty and care — not as inspiration, not as tragedy, but as part of a full human life.
+
+For everyone touched by either — this story holds space for you too.
+
+📖 Available now — link in bio.
+
+#DisabilityRepresentation #DementiaAwareness #WheelchairUser #InclusiveFiction #PoojaAndPhil #DiverseBooks #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Single graphic · 1:1 and 4:5
+Tone: Calm, dignified — NOT clinical. Warm navy/slate BG.
+
+Visual: Wheelchair silhouette at a window with soft morning light — paintbrush in hand, canvas on easel nearby. Human, purposeful, not pitying.
+
+Text overlay (white, clean serif):
+<span class="slide-copy">"He is not defined by his wheelchair. He is defined by his rage, his tenderness, his complexity — his love."</span>
+<span class="slide-copy">Pooja &amp; Phil · Bansi Pattni</span> — attribution, smaller
+
+Bottom: <span class="slide-copy">Disability representation done with honesty and care.</span> — small italic, white 60% opacity
+
+No emojis in the graphic itself. Keep it respectful and considered.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--announce-bg);color:var(--announce-fg)">21</div>
+          <div class="post-meta">
+            <div class="post-day">Friday — Day 19</div>
+            <div class="post-title">Book Club Invitation — Join the Community</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--announce-bg);color:var(--announce-fg)">Announce</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">Starting a BOOK CLUB for Pooja and Phil readers! 📚
+
+Every two weeks we'll discuss a section of the story together — what moved you, surprised you, made you laugh out loud.
+
+Every reader is welcome. No literary degree required. Just your honest reactions.
+
+Comment 'BOOKCLUB' below to join! 👇✨
+
+First discussion: Chapters 1–5. What did you feel reading the opening pages?
+
+#BookClub #PoojaAndPhilBookClub #ReadingCommunity #DiverseBooks #Bookstagram #BookTok #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Single graphic · 1:1 and 4:5
+Warm, inviting aesthetic — like a cosy reading nook
+BG: Deep warm cream, soft amber vignette
+
+Visual: Stack of books, tea mug, and the Pooja &amp; Phil cover
+Top label: <span class="slide-copy">JOIN THE BOOK CLUB</span> — small caps, orange
+Main text: <span class="slide-copy">Pooja &amp; Phil Reading Community</span> — large serif
+Subtext: <span class="slide-copy">Read. Discuss. Connect.</span> — italic, muted
+CTA strip at bottom: <span class="slide-copy">Comment 'BOOKCLUB' to join 👇</span>
+
+Facebook: Create a dedicated Facebook Group "Pooja &amp; Phil Readers" and link in post.
+Stories: Poll sticker — "Would you join a book club for this?" Yes! / Maybe</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── WEEK 8 ── -->
+  <section class="week-block reveal" id="week8">
+    <div class="week-header">
+      <div class="week-number">08</div>
+      <div class="week-info">
+        <div class="week-title">Community, Dreams &amp; One Month In</div>
+        <div class="week-dates">Monday · Wednesday · Friday — Days 22, 24, 26</div>
+      </div>
+    </div>
+    <div class="posts-grid">
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--hook-bg);color:var(--hook-fg)">22</div>
+          <div class="post-meta">
+            <div class="post-day">Monday — Day 22</div>
+            <div class="post-title">For the Dreamers Still in the "Not Yet" Season</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--hook-bg);color:var(--hook-fg)">Hook / Emotion</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">For everyone still working.
+Still hoping.
+Still choosing the dream even when it doesn't choose you back.
+
+Pooja didn't quit.
+Not when Tesco crushed her spirit.
+Not when the auditions said no.
+Not when her family didn't understand.
+
+She kept going.
+
+And this story is for every single person who is still in the "not yet" season. 💛
+
+📖 Pooja &amp; Phil — available now. Link in bio.
+
+#NotYet #KeepGoing #DreamerVibes #PoojaAndPhil #Motivation #FollowYourDream #BansiPattni #YouGotThis</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Single graphic · 1:1 and 4:5
+BG: Golden hour warm tones — amber sky, soft glow
+Visual: Woman silhouette walking towards light on a stage / open horizon — back to camera, full of possibility
+
+Text stacked, clean serif:
+<span class="slide-copy">For everyone still in the</span>
+<span class="slide-copy">"not yet" season.</span> — larger, bolder
+<span class="slide-copy">Pooja kept going. This book is for you.</span> — italic subtext
+
+Bottom: <span class="slide-copy">Pooja &amp; Phil · Available now</span>
+
+TikTok: Author directly to camera, heartfelt, personal — "This book is for everyone who's been told their dream isn't good enough." No heavy editing, authentic.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--engage-bg);color:var(--engage-fg)">23</div>
+          <div class="post-meta">
+            <div class="post-day">Wednesday — Day 24</div>
+            <div class="post-title">Reviews Push — Leave a Review CTA</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--engage-bg);color:var(--engage-fg)">Audience Engage</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">If Pooja and Phil moved you — even a little — I have one small ask.
+
+Please leave a review on Amazon or Goodreads. 🙏
+
+Reviews are the lifeblood of independent publishing. They help readers find books. They help authors keep writing.
+
+Even three sentences. Even just the stars. It makes the world of difference.
+
+If you've already done it — THANK YOU. From the bottom of my heart.
+
+Link in bio. 💛
+
+#LeaveAReview #PoojaAndPhil #SupportIndieAuthors #Goodreads #Amazon #BookReview #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Single graphic · 1:1 and 4:5
+Warm, personal tone — not sales-y, genuinely heartfelt
+
+BG: Cream with subtle orange vignette
+Visual: Author headshot or candid writing photo (warm, approachable)
+Text right side:
+<span class="slide-copy">One small ask.</span> — large serif, dark brown
+<span class="slide-copy">If this book moved you, please leave a review.</span> — subtext, italic
+<span class="slide-copy">Amazon · Goodreads · 2 minutes. World of difference.</span> — small, orange
+
+Bottom CTA pill: <span class="slide-copy">Link in bio</span>
+
+Stories: Screenshot of Goodreads page + "Have you left a review yet?" Yes ✅ / Not yet (link sticker)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--bts-bg);color:var(--bts-fg)">24</div>
+          <div class="post-meta">
+            <div class="post-day">Friday — Day 26</div>
+            <div class="post-title">One Month In — Thank You &amp; What's Coming</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--bts-bg);color:var(--bts-fg)">Behind the Scenes</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">One month since launch. I am completely overwhelmed — in the best possible way. 🥹
+
+Every share. Every review. Every message saying "I saw myself in this story."
+
+YOU did this.
+
+Pooja started as a dream in my head. You've made her real.
+
+Thank you. From the bottom of my heart.
+
+We're not done. Month 2 is just beginning.
+
+More character deep-dives, book club discussions, and something special coming very soon. 👀
+
+Stay close. 💛
+
+#OneMonthAnniversary #PoojaAndPhil #ThankYou #AuthorGratitude #BookCommunity #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Single graphic · 1:1 and 4:5
+Celebratory but intimate — not over-the-top
+
+BG: Rich warm orange fading to amber
+Visual: Book cover centred with a soft golden glow behind it
+Text above cover: <span class="slide-copy">ONE MONTH.</span> — small caps, white
+Text below cover: <span class="slide-copy">Thank you for reading this story.</span> — white italic serif
+Author name: <span class="slide-copy">— Bansi Pattni</span> — elegant, bottom
+
+TikTok: Author to camera — no script, genuine thank you. Share a review someone left that meant something personal. End with "Month 2 is just getting started." Emotional, warm, real.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- MONTH 3 DIVIDER                            -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="month-divider reveal" id="month3">
+    <div class="month-divider-inner">
+      <span class="month-badge">Month 3 — Growth</span>
+      <div>
+        <div class="month-divider-title">Sustain. Deepen.<br>Build Long-Term Community.</div>
+        <div class="month-divider-desc">Book club discussions, cultural deep-dives, reader spotlights, mystery threads, and a 2-month anniversary celebration. The posts designed to keep the conversation alive and drive long-tail sales.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WEEK 9 ── -->
+  <section class="week-block reveal" id="week9">
+    <div class="week-header">
+      <div class="week-number">09</div>
+      <div class="week-info">
+        <div class="week-title">Book Club + Cultural Deep Dives</div>
+        <div class="week-dates">Monday · Wednesday · Friday — Days 29, 31, 33</div>
+      </div>
+    </div>
+    <div class="posts-grid">
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--story-bg);color:var(--story-fg)">25</div>
+          <div class="post-meta">
+            <div class="post-day">Monday — Day 29</div>
+            <div class="post-title">Book Club Discussion #1 — Chapters 1–5</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--story-bg);color:var(--story-fg)">Story Tease</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">📖 BOOK CLUB DISCUSSION #1 — Chapters 1–5
+
+"It's as though life has gone into hiding, time seems to have stopped."
+— Pooja, Chapter 1
+
+What did you feel reading the opening chapters?
+
+Did you immediately recognise someone in Pooja's story?
+Was there a scene that hit you hardest in Part 1?
+
+Drop your thoughts below — spoilers welcome here 👇
+
+(Use 📖 before your comment if it contains spoilers, for those still catching up!)
+
+#PoojaAndPhilBookClub #BookDiscussion #Bookstagram #BookTok #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Carousel (3 slides) · 1:1 and 4:5
+Tone: Warm book-club aesthetic — like a cosy reading group invite
+
+<span class="slide-label">SLIDE 1 — The Question</span>
+BG: Deep warm cream, orange left-edge accent bar
+<span class="slide-copy">BOOK CLUB · Discussion #1</span> — small label, orange
+<span class="slide-copy">Chapters 1–5</span> — large serif heading
+<span class="slide-copy">"What did you feel reading the opening pages?"</span> — italic, dark brown
+Small teacup / book icon bottom-right
+
+<span class="slide-label">SLIDE 2 — The Quote</span>
+BG: Dark brown, centred quote in cream
+<span class="slide-copy">"It's as though life has gone into hiding, time seems to have stopped."</span> — large serif italic
+<span class="slide-copy">— Pooja, Chapter 1</span>
+
+<span class="slide-label">SLIDE 3 — The CTA</span>
+BG: Orange, white text
+<span class="slide-copy">Drop your thoughts below 👇</span>
+<span class="slide-copy">Spoilers welcome. Use 📖 to tag them.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--quote-bg);color:var(--quote-fg)">26</div>
+          <div class="post-meta">
+            <div class="post-day">Wednesday — Day 31</div>
+            <div class="post-title">Phil's Paintings — Art, Healing &amp; Softness</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--quote-bg);color:var(--quote-fg)">Quote / Insight</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">Phil picks up his paintbrush and something changes.
+
+The man who controlled boardrooms learns to surrender to colour.
+
+"I don't know what is more beautiful — the painting or the actual scene."
+— Pooja, from Pooja &amp; Phil 🎨
+
+There is something quietly revolutionary about a man choosing softness.
+
+What's YOUR creative outlet? The thing you do when words won't come?
+
+Drop it below 👇
+
+#HealingThroughArt #PhilRivers #PoojaAndPhil #SoftMasculinity #ArtAndSoul #CreativeLife #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Single graphic · 1:1 and 4:5
+Visual: Paintbrush resting on a canvas with visible wet paint — warm ochre, amber, soft greens
+Atmosphere: Soft, contemplative. Natural light. Outdoor setting implied.
+
+Text overlay (dark serif, clean):
+<span class="slide-copy">"I don't know what is more beautiful — the painting or the actual scene."</span>
+<span class="slide-copy">— Pooja, Pooja &amp; Phil · Bansi Pattni</span> — attribution
+
+Small book cover lower-left corner
+No busy backgrounds — let the art visual breathe
+
+Stories: same image + "What's your creative outlet?" open text question box</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--engage-bg);color:var(--engage-fg)">27</div>
+          <div class="post-meta">
+            <div class="post-day">Friday — Day 33</div>
+            <div class="post-title">Masala Tea Recipe — Cultural Comfort Content</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--engage-bg);color:var(--engage-fg)">Audience Engage</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">Mum's masala tea from the pages of Pooja and Phil ☕
+
+The recipe Pooja can't start her day without:
+
+🫖 Strong black tea
+🥛 Full fat milk
+🫚 Fresh ginger (the more the better)
+🌿 Cardamom pods, lightly crushed
+✨ Love (non-negotiable)
+
+Bring to boil. Simmer 3 minutes. Pour. Exhale.
+
+It's a much needed hug of motivation in a mug on a frosty morning.
+
+What do YOU add to yours? Drop it below 👇
+
+#MasalaTea #ChaiRecipe #BritishAsian #IndianTea #PoojaAndPhil #ChaiLovers #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Recipe card graphic · 1:1 and 4:5 + Reel version
+Palette: Warm terracotta, cream, spice tones — very Ottolenghi / food-editorial feel
+
+Static graphic:
+BG: Cream textured paper look
+Visual: Masala tea ingredients flat-lay — ginger, cardamom, tea bag, milk bottle
+Title: <span class="slide-copy">POOJA'S MASALA TEA</span> — bold serif, dark brown
+Recipe list with small hand-drawn icons for each ingredient
+Footer strip: <span class="slide-copy">As featured in Pooja &amp; Phil · Bansi Pattni</span>
+
+Reel version (30 sec): Slow aesthetic making of the tea — pour milk, add spices, steam rising. On-screen text of each ingredient. End with mug held in hands. Soft Bollywood instrumental background.
+
+TikTok: "Recreating Pooja's masala tea from the book" — cosy, quiet, satisfying.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── WEEK 10 ── -->
+  <section class="week-block reveal" id="week10">
+    <div class="week-header">
+      <div class="week-number">10</div>
+      <div class="week-info">
+        <div class="week-title">Second Gen Struggles &amp; Emotional Themes</div>
+        <div class="week-dates">Monday · Wednesday · Friday — Days 36, 38, 40</div>
+      </div>
+    </div>
+    <div class="posts-grid">
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--hook-bg);color:var(--hook-fg)">28</div>
+          <div class="post-meta">
+            <div class="post-day">Monday — Day 36</div>
+            <div class="post-title">The Family Dinner Table — Relatable Pressure</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--hook-bg);color:var(--hook-fg)">Hook / Emotion</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">"So what are your plans for the future?"
+
+The five most dreaded words at the dinner table for any child of immigrants. 😅
+
+Pooja has heard this question more times than she can count.
+At dinner. At weddings. At the Tesco till.
+
+And she always has the same answer — the wrong one.
+
+If this scene is in your body memory too, Pooja and Phil was written for you. 💛
+
+📖 Available now — link in bio.
+
+#FamilyDinner #ParentExpectations #BritishAsian #SecondGen #PoojaAndPhil #Relatable #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Single graphic · 1:1 and 4:5
+Visual: Indian family dinner table setting — daal, roti, steel plates, warm kitchen light. Slightly soft focus on the table, suggesting tension in the atmosphere.
+
+Text overlay (dark brown, serif):
+<span class="slide-copy">"So what are your plans for the future?"</span> — large, centred
+<span class="slide-copy">The five most dreaded words.</span> — smaller italic below
+
+Bottom strip (dark brown bg): <span class="slide-copy">Pooja heard this question her whole life. Pooja &amp; Phil — out now.</span>
+
+TikTok: "Indian family dinner table topics" — relatable list format with on-screen text. Funny-but-real tone. Real audio from creator or trending audio.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--quote-bg);color:var(--quote-fg)">29</div>
+          <div class="post-meta">
+            <div class="post-day">Wednesday — Day 38</div>
+            <div class="post-title">Quote Card — Phil's Wisdom on Dreams</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--quote-bg);color:var(--quote-fg)">Quote / Insight</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">"The world does not bank on dreams. Nobody believed me when I wanted to build a successful business until I made it happen. It's a lonely road — you will only hear the applause when you make it."
+— Philip Rivers, from Pooja &amp; Phil
+
+The grumpy old man said what nobody else would.
+
+And that changed everything.
+
+📖 Available now — link in bio.
+
+#PhilipRivers #BookQuote #PoojaAndPhil #DreamerQuotes #Wisdom #FollowYourDream #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Quote card · 1:1 and 4:5
+BG: Deep slate/charcoal with subtle warm texture
+Full quote in large white serif (Cormorant Garamond), light italic
+
+<span class="slide-copy">"The world does not bank on dreams... you will only hear the applause when you make it."</span> — centred, generous line spacing
+<span class="slide-copy">— Philip Rivers, Pooja &amp; Phil</span> — attribution, amber colour
+<span class="slide-copy">Bansi Pattni</span> — small elegant type below
+
+Visual accent: Thin amber horizontal rule above the quote
+Book cover thumbnail lower-right corner
+
+TikTok: Slow text reveal animation with soft ambient piano music — no voiceover needed, let the quote land.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--story-bg);color:var(--story-fg)">30</div>
+          <div class="post-meta">
+            <div class="post-day">Friday — Day 40</div>
+            <div class="post-title">Scene Spotlight — The Outdoor Painting Day</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--story-bg);color:var(--story-fg)">Story Tease</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">There's a scene in this book where everything shifts.
+
+A park bench. A canvas. A picnic basket.
+
+Two people who were never supposed to understand each other — and suddenly, they do.
+
+It's quiet. It's ordinary. And it changes everything.
+
+No spoilers — but once you reach that scene? You'll know.
+
+📖 Pooja &amp; Phil — available now. Link in bio.
+
+#ThatScene #PoojaAndPhil #SlowBurn #UnexpectedConnection #BooksOfInstagram #RomanceReads #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Single graphic or short Reel · 1:1 and 9:16
+Aesthetic: Impressionist/painterly feel — warm golden afternoon light
+Visual: Park scene — ducks on a lake, green grass, a canvas on an easel, picnic basket in soft focus
+
+Text overlay (clean white serif):
+<span class="slide-copy">"There's a scene in this book where everything shifts."</span>
+<span class="slide-copy">You'll know it when you get there.</span> — italic, smaller
+
+Bottom: <span class="slide-copy">Pooja &amp; Phil · Available now</span> — small, amber
+
+Reel version (15 sec): Pan across a park/lake scene. On-screen text appears line by line. Slow, contemplative. No voiceover — ambient nature sound or soft piano. End on book cover.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── WEEK 11 ── -->
+  <section class="week-block reveal" id="week11">
+    <div class="week-header">
+      <div class="week-number">11</div>
+      <div class="week-info">
+        <div class="week-title">Mystery, Readers &amp; The Bigger World</div>
+        <div class="week-dates">Monday · Wednesday · Friday — Days 43, 45, 47</div>
+      </div>
+    </div>
+    <div class="posts-grid">
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--engage-bg);color:var(--engage-fg)">31</div>
+          <div class="post-meta">
+            <div class="post-day">Monday — Day 43</div>
+            <div class="post-title">Book Club Discussion #2 — Chapters 11–14</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--engage-bg);color:var(--engage-fg)">Audience Engage</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">📖 BOOK CLUB DISCUSSION #2 — Chapters 11–14
+
+Rehearsals. A diagnosis. A collapse.
+
+Everything changes here.
+
+Three questions to start us off:
+1. How did Phil's diagnosis land for you?
+2. Was there a character you changed your mind about in this section?
+3. What do you think the photograph of the mystery woman means?
+
+Drop your thoughts below. Use 📖 before any spoilers.
+
+This is the conversation Pooja and Phil was written to start. 💛
+
+#PoojaAndPhilBookClub #BookDiscussion #Chapters11to14 #EmotionalRead #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">3-slide Carousel · 1:1 and 4:5
+
+<span class="slide-label">SLIDE 1 — Section Header</span>
+BG: Deep charcoal, white text
+<span class="slide-copy">BOOK CLUB · Discussion #2</span> — small orange label
+<span class="slide-copy">Chapters 11–14</span> — large white serif
+<span class="slide-copy">"Rehearsals. A diagnosis. A collapse."</span> — italic subtext, amber
+
+<span class="slide-label">SLIDE 2 — Questions</span>
+BG: Warm cream
+Three numbered discussion questions in clean DM Sans body font, each with a small amber bullet
+Heading: <span class="slide-copy">Three things to talk about</span>
+
+<span class="slide-label">SLIDE 3 — CTA</span>
+BG: Orange
+<span class="slide-copy">Drop your thoughts 👇</span> — large white
+<span class="slide-copy">Use 📖 to tag spoilers. All reactions welcome.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--hook-bg);color:var(--hook-fg)">32</div>
+          <div class="post-meta">
+            <div class="post-day">Wednesday — Day 45</div>
+            <div class="post-title">The Woman in the Photograph — Mystery Thread</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--hook-bg);color:var(--hook-fg)">Hook / Emotion</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">Phil's office. A box of old journals. And a photograph that falls out — a woman in a black dress with long brown hair, sparkly dark eyes, red lipstick.
+
+No name on the back.
+
+Pooja fights the urge to open the envelope addressed "To my love."
+
+Who is she? What happened?
+
+Phil never says.
+
+📖 Your theories below — no spoilers please, or tag with 📖 if you've already read it!
+
+#WomanInThePhoto #PhilsSecret #PoojaAndPhil #BookMystery #BansiPattni #TheoriesBelieve</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Single graphic · 1:1 and 4:5
+Tone: Mysterious, intimate, film noir-ish
+BG: Very dark background — near black, slight warm undertone
+Visual: An old photograph prop (slightly aged/grainy) — back of a woman in an elegant black dress, dark hair. Moody, cinematic.
+
+Text (white serif, minimal):
+<span class="slide-copy">She fell out of his journal.</span>
+<span class="slide-copy">No name on the back.</span>
+<span class="slide-copy">Phil never says.</span>
+<span class="slide-copy">— Pooja &amp; Phil</span>
+
+Bottom: <span class="slide-copy">Who is she? Your theories below 👇</span>
+
+TikTok: Slow zoom on the "photo" visual. Text appears line by line. Suspenseful music. "This detail in Pooja and Phil has me spiralling..."</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--bts-bg);color:var(--bts-fg)">33</div>
+          <div class="post-meta">
+            <div class="post-day">Friday — Day 47</div>
+            <div class="post-title">Author Q&amp;A — Round 2</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--bts-bg);color:var(--bts-fg)">Behind the Scenes</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">Round 2! You asked, I answered. 📩
+
+Your top questions this month:
+
+🌸 "Will there be a sequel?"
+🖤 "Why did you include dementia in the story?"
+💛 "What was the hardest scene to write?"
+🎨 "Is Phil based on anyone real?"
+
+My answers in the caption below (or swipe through the carousel / watch the video):
+
+[Insert answers directly in the post — see Designer Brief for carousel format]
+
+Have another question? Drop it below — I read every single one. 💛
+
+#AuthorQA #PoojaAndPhil #AskTheAuthor #BehindTheBook #WritersLife #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">5-slide Carousel · 1:1 and 4:5
+
+<span class="slide-label">SLIDE 1 — Cover</span>
+BG: Warm cream, author headshot on the left
+<span class="slide-copy">Q&A Round 2</span> — large serif heading
+<span class="slide-copy">You asked. I answered.</span> — italic subtext
+
+<span class="slide-label">SLIDES 2–5 — One Q&amp;A per slide</span>
+Layout: Question in orange serif at top → Answer in dark brown DM Sans body text below
+Consistent clean layout — cream BG, orange question, dark answer
+
+Question format example:
+<span class="slide-copy">Q: "Will there be a sequel?"</span>
+[Author's answer text here]
+
+Bottom of each slide: small book cover + <span class="slide-copy">Pooja &amp; Phil · Bansi Pattni</span>
+
+TikTok: Author to camera answering questions conversationally. Casual, warm. Show the book once during the video.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── WEEK 12 ── -->
+  <section class="week-block reveal" id="week12">
+    <div class="week-header">
+      <div class="week-number">12</div>
+      <div class="week-info">
+        <div class="week-title">Two Months In — Celebrate &amp; Look Forward</div>
+        <div class="week-dates">Monday · Wednesday · Friday — Days 50, 52, 54</div>
+      </div>
+    </div>
+    <div class="posts-grid">
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--quote-bg);color:var(--quote-fg)">34</div>
+          <div class="post-meta">
+            <div class="post-day">Monday — Day 50</div>
+            <div class="post-title">Racer the Horse — Unexpected Bravery</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--quote-bg);color:var(--quote-fg)">Quote / Insight</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">She got on the horse.
+She was absolutely terrified.
+She held on anyway. 🐎
+
+"You should do more of what scares you."
+— Philip Rivers, from Pooja &amp; Phil
+
+It's a lesson that applies to everything — not just horses. Not just Pooja.
+
+What's your "getting on the horse" moment? The thing you did scared, and it turned out to be the best decision?
+
+Drop it below 👇 💛
+
+#DoWhatScalesYou #BraveChoice #PoojaAndPhil #PhilipRivers #Courage #LifeLessons #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Quote card · 1:1 and 4:5
+Visual: Countryside/stable setting — green fields, blue sky, a horse in the background (soft focus)
+BG: Light, bright, airy — natural colours, not dark
+
+Text overlay (dark serif, minimal):
+<span class="slide-copy">"You should do more of what scares you."</span> — large serif
+<span class="slide-copy">— Philip Rivers, Pooja &amp; Phil</span> — attribution, orange
+<span class="slide-copy">Bansi Pattni</span> — small below
+
+Bottom: <span class="slide-copy">What's YOUR 'getting on the horse' moment? 👇</span>
+
+TikTok: Funny + heartfelt content about the horse scene. "The funniest scene in Pooja and Phil is also one of the most meaningful and here's why..." — author to camera or text-based video.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--announce-bg);color:var(--announce-fg)">35</div>
+          <div class="post-meta">
+            <div class="post-day">Wednesday — Day 52</div>
+            <div class="post-title">Final Reviews Push — Goodreads &amp; Amazon</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--announce-bg);color:var(--announce-fg)">Announce</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">I'm going to be honest with you. 💛
+
+Reviews are the lifeblood of independent publishing.
+
+They help readers discover books.
+They help algorithms surface stories that deserve to be found.
+They help authors like me keep writing.
+
+If Pooja and Phil moved you — even a little — please leave a review on Amazon or Goodreads.
+
+Three sentences. Five stars (if you felt it). Two minutes of your time.
+
+It changes everything.
+
+Link in bio. Thank you. 🙏
+
+#LeaveAReview #PoojaAndPhil #SupportIndieAuthors #Goodreads #Amazon #BookReview #BansiPattni</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Single graphic · 1:1 and 4:5
+Tone: Warm, personal, direct — not sales-y
+
+BG: Cream/white with a large orange star cluster (5 stars) as the focal visual
+Text (dark brown):
+<span class="slide-copy">One small ask from me to you.</span> — large serif heading
+<span class="slide-copy">If this book moved you, please leave a review.</span> — italic subtext
+<span class="slide-copy">Amazon · Goodreads · 2 minutes · World of difference.</span> — small DM Sans, orange
+CTA: <span class="slide-copy">Link in bio</span> — orange pill button shape
+
+Author photo optional (candid, warm) on right side
+
+Stories: Direct link sticker to Amazon review page + "Have you left a review?" Yes ✅ / Not yet (with review link)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card" onclick="toggle(this)">
+        <div class="post-card-header">
+          <div class="post-num" style="background:var(--bts-bg);color:var(--bts-fg)">36</div>
+          <div class="post-meta">
+            <div class="post-day">Friday — Day 54</div>
+            <div class="post-title">Two-Month Anniversary — Thank You &amp; What's Next</div>
+          </div>
+          <div class="post-right">
+            <span class="type-badge" style="background:var(--bts-bg);color:var(--bts-fg)">Behind the Scenes</span>
+            <div class="chevron"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <div class="platform-row">
+          <span class="platform-pill pill-fb">Facebook</span>
+          <span class="platform-pill pill-ig">Instagram</span>
+          <span class="platform-pill pill-tok">BookTok</span>
+        </div>
+        <div class="post-detail">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Caption — Ready to Publish</div>
+              <div class="caption-box">TWO MONTHS of Pooja and Phil. 🎉🥹
+
+Two months since this story went out into the world.
+
+Two months of your messages, reviews, book club discussions, and tears in public transport.
+
+Two months of knowing this story found its people.
+
+I am so grateful. More than I can say. 💛
+
+Something is coming. Something you've been asking about.
+
+Stay close.
+
+Thank you. For reading it so carefully. For passing it on. For making Pooja real. 🤍
+
+#PoojaAndPhil #TwoMonths #ThankYou #BookCommunity #WhatsNext #BansiPattni #AuthorGratitude</div>
+              <button class="copy-btn" onclick="copyCaption(this, event)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Caption
+              </button>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Designer Brief</div>
+              <div class="designer-box">Celebratory single graphic · 1:1 and 4:5 + Reel version
+
+Static graphic:
+BG: Rich amber/orange gradient fading to dark brown
+Book cover centred with a warm glowing halo effect behind it
+Large text above: <span class="slide-copy">TWO MONTHS.</span> — white, bold serif
+Text below cover: <span class="slide-copy">Thank you for reading this story.</span> — cream italic
+<span class="slide-copy">— Bansi Pattni</span> — author name, elegant, amber
+
+Reel version (30–45 sec): Montage of reader reviews (screenshots), book cover, community moments. Uplifting Bollywood-inspired music. End with teaser text: <span class="slide-copy">Something is coming. Stay close.</span>
+
+TikTok: Author to camera. No script — genuine gratitude. Share one review that meant the most. Close with teaser for what's next. Emotional, warm, real.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 </main>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-title">Pooja &amp; Phil</div>
   <div class="footer-divider"></div>
-  <p class="footer-sub">Pre-Launch Social Media Calendar — Month 1 &nbsp;·&nbsp; by Bansi Pattni</p>
+  <p class="footer-sub">3-Month Social Media Calendar — Months 1, 2 &amp; 3 &nbsp;·&nbsp; by Bansi Pattni</p>
   <p class="footer-sub" style="margin-top:8px;font-size:0.75rem;opacity:0.5;">All captions are draft — review before publishing &nbsp;·&nbsp; 3 posts per week &nbsp;·&nbsp; Mon / Wed / Fri</p>
 </footer>
 
